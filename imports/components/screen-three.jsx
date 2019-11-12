@@ -31,7 +31,7 @@ const useStyle = makeStyles(theme => ({
     height: '100%',
     width: 1,
     backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#ececec 33%, rgba(255,255,255,0) 0%), linear-gradient(#ececec 33%, rgba(255,255,255,0) 0%)',
+    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
@@ -46,7 +46,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: '2.9rem',
     padding: 15,
     boxSizing: 'border-box',
-    color: '#ececec',
+    color: '#d8d8d8',
     borderColor: '#fff',
   },
   redBordersBlockStyle: {
@@ -93,7 +93,7 @@ export const ScreenThree = () => {
       </div>
       <div style={{position: 'relative', padding: '0 48px'}}>
         <div className={classes.dottedLineStyle} />
-        <Typography variant="body2" component='h2' align='center' style={{paddingTop: 64}}>
+        <Typography variant="h4" component='h2' align='center' style={{paddingTop: 64}}>
         чтобы задать вопрос или рассчитать стоимость</Typography>
         <Typography variant="body1" component='p' align='center' style={{paddingBottom: 64}}>
         нажмите на кнопку ниже:</Typography>
@@ -113,7 +113,7 @@ export const ScreenThree = () => {
           <Grid item xs={9}>
             <Typography variant="body1" component='h2' align='center'>
           или звоните по телефону</Typography>
-            <Typography variant="body2" component='p' align='center'>
+            <Typography variant="h4" component='p' align='center'>
             8 800 505 65 33</Typography>
           </Grid>
         </Grid>

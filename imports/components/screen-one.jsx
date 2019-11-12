@@ -4,7 +4,6 @@ import {
   Grid,
   makeStyles,
   Button,
-  Paper,
   Typography
 } from '@material-ui/core';
 
@@ -16,7 +15,7 @@ const useStyle = makeStyles(theme => ({
   clipPathBlock: {
     clipPath: 'polygon(85% 0, 100% 5%, 100% 100%, 0 100%, 0 5%, 15% 0)',
     backgroundPosition: 'top',
-    backgroundImage: "url('/man.jpg'), linear-gradient(#00000003, #0000009e)",
+    backgroundImage: "url('/photo.jpg'), linear-gradient(#00000003, #0000009e)",
     backgroundBlendMode: 'saturation',
     backgroundSize: 'cover',
     width: '100%',

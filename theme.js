@@ -45,24 +45,25 @@ export const theme = createMuiTheme({
       fontWeight: 500,
     },
     h4: {
-      fontWeight: 300,
+      fontWeight: 500,
       textTransform: 'uppercase',
       fontFamily,
+      lineHeight: 1.4,
+      fontSize: '2.9rem',
     },
     subtitle1: {
       lineHeight: 1.4,
       fontFamily,
       fontSize: '2.9rem',
-      fontWeight: 100
+      fontWeight: 300
     },
     body1: {
       lineHeight: 1.4,
       fontFamily,
       fontSize: '2.9rem',
-      fontWeight: 100
+      fontWeight: 300
     },
     body2: {
-      textTransform: 'uppercase',
       lineHeight: 1.4,
       fontFamily,
       fontSize: '2.9rem',

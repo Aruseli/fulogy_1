@@ -1,15 +1,18 @@
 import React from 'react';
 
-import {Grid, makeStyles, Typography, Container, Paper} from '@material-ui/core';
+import {makeStyles, Typography, Container, Paper} from '@material-ui/core';
 
 const useStyle = makeStyles(theme => ({
   handBlockStyle: {
     backgroundImage: "url('/hand.png')",
-    backgroundPosition: 'left',
+    backgroundPosition: -67,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     width: '100%',
-    height: '100%',
+    height: 200,
+    position: 'absolute',
+    top: 123,
+    zIndex: -1
   },
   dottedLineStyle: {
     position: 'absolute',
@@ -18,7 +21,7 @@ const useStyle = makeStyles(theme => ({
     height: '100%',
     width: 1,
     backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#ededed 33%, rgba(255,255,255,0) 0%), linear-gradient(#ededed 33%, rgba(255,255,255,0) 0%)',
+    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
@@ -29,7 +32,7 @@ const useStyle = makeStyles(theme => ({
     height: '100%',
     width: 1,
     backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#EEECED 33%, rgba(255,255,255,0) 0%), linear-gradient(#EEECED 33%, rgba(255,255,255,0) 0%)',
+    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
@@ -40,7 +43,7 @@ const useStyle = makeStyles(theme => ({
     height: '100%',
     width: 1,
     backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#F0EAEC 33%, rgba(255,255,255,0) 0%), linear-gradient(#F0EAEC 33%, rgba(255,255,255,0) 0%)',
+    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
@@ -95,18 +98,19 @@ export const ScreenFour = () => {
       <div style={{position: 'relative'}}>
         <div style={{position: 'relative', paddingTop: 240, paddingRight: 96, paddingBottom: 48}}>
           <div className={classes.dottedLineStyle} />
-          <div className={classes.handBlockStyle}>
-              <Typography variant='body1' component='p'>&ensp;
-              <Typography variant="body1" component='span' style={{color: '#fff'}}>Мы</Typography>&ensp;не экономим на материалах, а потому качество нашей 
-                продукции на высшем уровне, в чем Вы сможете убедиться сами.
-              </Typography>
-          </div>
+          <div className={classes.handBlockStyle} />
+          <Container>
+            <Typography variant='body1' component='p'>&ensp;
+            <Typography variant="body1" component='span' style={{color: '#fff', textTransform: 'uppercase'}}>мы</Typography>&ensp;не экономим на материалах, а потому качество нашей 
+              продукции на высшем уровне, в чем Вы сможете убедиться сами.
+            </Typography>
+          </Container>
         </div> 
         <div className={classes.clipPathBlock} />
         <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles1}/>
         <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles2}/>
         <div style={{boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)'}}>
-          <Typography variant='h3' component='p' align='center' style={{padding: 64}}>подробнее 
+          <Typography variant='h4' component='p' align='center' style={{padding: 64}}>подробнее 
             ознакомиться с необычными свойствами светильника вы можете<br />на этой странице
           </Typography>
         </div>
@@ -117,7 +121,7 @@ export const ScreenFour = () => {
           <Typography variant="h2" component='h1' gutterBottom>благодаря отсутствию посредников</Typography>
           <Typography variant='body1' component='p'>(поскольку это собственная разработка) и высококачественным комплектующим,&ensp;
                 <Typography variant="body1" component='span' style={{color: '#fff'}}>мы предлагаем</Typography>&ensp;оптимальное
-                сщчетание цены и качества!
+                сочетание цены и качества!
                 </Typography>
         </Container>
         <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles3}/>

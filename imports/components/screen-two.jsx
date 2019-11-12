@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Grid, makeStyles, Typography, Container, Paper} from '@material-ui/core';
+import {makeStyles, Typography, Container, Paper} from '@material-ui/core';
 
 const useStyle = makeStyles(theme => ({
   redLineStyle: {
@@ -44,7 +44,7 @@ const useStyle = makeStyles(theme => ({
     boxSizing: 'border-box',
     color: '#ececec',
     borderColor: '#fff',
-  }
+  },
 }))
 
 export const ScreenTwo = () => {
