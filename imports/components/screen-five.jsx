@@ -45,7 +45,14 @@ const useStyle = makeStyles(theme => ({
     color: '#cdcdcd',
     borderColor: '#fff',
   },
-  arrowStyles: {
+  arrowStyles1: {
+    position: 'absolute',
+    width: 121,
+    left: 35,
+    transform: 'rotate(-14deg)',
+    top: 208
+  },
+  arrowStyles2: {
     position: 'absolute',
     width: 121,
     left: 35,
@@ -88,7 +95,7 @@ export const ScreenFive = () => {
           <Typography variant='body2' component='p' gutterBottom>У нас вежливые и чистоплотные монтажники, которые не мусорят.
           </Typography>
         </div>
-        <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles}/>
+        <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles1}/>
         <div style={{position: 'relative', paddingTop: 112}}>
           <div className={classes.dottedLineStyle} />
           <div className={classes.handBlockStyle} />
