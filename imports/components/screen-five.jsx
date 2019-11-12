@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {makeStyles, Typography, Container, Paper} from '@material-ui/core';
+import {Grid, makeStyles, Typography, Container, Paper, Button} from '@material-ui/core';
 
 const useStyle = makeStyles(theme => ({
   redLineStyle: {
@@ -54,10 +54,10 @@ const useStyle = makeStyles(theme => ({
   },
   arrowStyles2: {
     position: 'absolute',
-    width: 121,
-    left: 35,
-    transform: 'rotate(-14deg)',
-    top: 208
+    width: 100,
+    right: 110,
+    transform: 'rotate(7deg)',
+    top: 100
   },
   handBlockStyle: {
     backgroundImage: "url('/handAll.png')",
@@ -68,6 +68,16 @@ const useStyle = makeStyles(theme => ({
     height: 450,
     position: 'absolute',
     top: -240
+  },
+  clipPathBlock: {
+    clipPath: 'polygon(100% 0, 100% 100%, 85% 95%, 15% 95%, 0 100%, 0 0)',
+    backgroundPosition: 'center',
+    backgroundImage: "url('/Photo-8.jpg')",
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '35vh',
+    position: 'relative',
+    zIndex: 2
   },
 }))
 
@@ -85,7 +95,7 @@ export const ScreenFive = () => {
         </div>
         <Container>
           <Typography variant='body1' component='p' gutterBottom>Мы настолько уверены в качестве своего продукта, что 
-            даем письменную гарантию качества на &ensp;
+            даем письменную гарантию качества на&ensp;
             <Typography variant="body1" component='span' color='primary'>5 лет</Typography>&ensp;на сами изделия и на монтаж.  
           </Typography>
         </Container>
@@ -106,7 +116,56 @@ export const ScreenFive = () => {
           </Container>
         </div> 
       </div>
-
+      <div style={{position: 'relative', paddingTop: 128, paddingRight: 96, paddingBottom: 48}}>
+        <div className={classes.dottedLineStyle} />
+        <Container style={{paddingRight: 50}}>
+          <Typography variant="h2" component='h1' gutterBottom>а главное,</Typography>
+          <Typography variant='body1' component='p'>мы понимаем, что только довольный заказчик может принести
+            реальную прибыль!</Typography>
+        </Container>
+        <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles2}/>
+      </div>
+      <div className={classes.clipPathBlock} />
+      <div style={{position: 'relative'}}>   
+        <div className={classes.dottedLineStyle} />     
+        <Typography variant='body1' component='p' align='center' style={{padding: 64}}>
+          Поэтому мы создаем удобство готовки на кухне, что влияет на вкус блюд и на 
+          желание готовить.
+        </Typography>
+      </div>
+      <div style={{boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)', boxSizing: 'border-box', padding: 80}}>
+        <Typography variant='h2' component='p' align='center'>вся наша работа</Typography>
+        <Typography variant='body1' component='p' align='center'>направлена именно на это.<br />
+          <Typography variant="body1" component='span' color='primary'>Вы&nbsp;будете приходить к нам снова</Typography>&ensp;и&nbsp;приведете друзей и знакомых.  
+        </Typography>
+      </div>
+      <div style={{position: 'relative', padding: '0 48px'}}>
+        <div className={classes.dottedLineStyle} />
+        <Typography variant="h4" component='h2' align='center' style={{paddingTop: 64}}>
+        чтобы задать вопрос или рассчитать стоимость</Typography>
+        <Typography variant="body1" component='p' align='center' style={{paddingBottom: 64}}>
+        нажмите на кнопку ниже:</Typography>
+        <Grid display='column' container justify='center' alignItems='center' spacing={10}>
+          <Grid item xs={9}>
+            <Button fullWidth variant="contained" color="primary" size="large">Рассчитать стоимость</Button>
+          </Grid>
+          <Grid item xs={9}>
+            <Button fullWidth variant="contained" color="primary" size="large">Задать вопрос</Button>
+          </Grid>
+          <Grid item xs={9}>
+            <Button fullWidth variant="contained" color="primary" size="large">Заказать звонок</Button>
+          </Grid>
+          <Grid item xs={9}>
+            <Button fullWidth variant="contained" color="primary" size="large">Заказать звонок</Button>
+          </Grid>
+          <Grid item xs={9}>
+            <Typography variant="body1" component='h2' align='center'>
+          или звоните по телефону</Typography>
+            <Typography variant="h4" component='p' align='center'>
+            8 800 505 65 33</Typography>
+          </Grid>
+        </Grid>
+      </div>
     </>  
   )
 }

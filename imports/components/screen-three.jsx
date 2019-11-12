@@ -117,7 +117,6 @@ export const ScreenThree = () => {
             8 800 505 65 33</Typography>
           </Grid>
         </Grid>
-        
       </div>
     </>  
   )

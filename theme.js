@@ -32,7 +32,7 @@ export const theme = createMuiTheme({
     h2: {
       textTransform: 'uppercase',
       letterSpacing: '0.07em',
-      fontWeight: 500,
+      fontWeight: 700,
       fontSize: '3rem',
       lineHeight: 1.3,
       fontFamily,

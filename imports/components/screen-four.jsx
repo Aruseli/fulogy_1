@@ -115,7 +115,7 @@ export const ScreenFour = () => {
           </Typography>
         </div>
       </div>
-      <div style={{position: 'relative', paddingTop: 240, paddingRight: 96, paddingBottom: 48}}>
+      <div style={{position: 'relative', paddingTop: 128, paddingRight: 96, paddingBottom: 48}}>
         <div className={classes.dottedLineStyleDarker} />
         <Container>
           <Typography variant="h2" component='h1' gutterBottom>благодаря отсутствию посредников</Typography>
@@ -126,7 +126,7 @@ export const ScreenFour = () => {
         </Container>
         <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles3}/>
       </div>
-        <div className={classes.clipPathBlock2} />
+      <div className={classes.clipPathBlock2} />
       <div style={{position: 'relative'}}>   
         <div className={classes.dottedLineStyleDarker2} />     
         <Typography variant='body1' component='p' align='center' style={{padding: 64}}>Таким образом, приобритая наши светильники,
