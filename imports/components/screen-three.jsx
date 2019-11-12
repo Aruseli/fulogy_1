@@ -47,7 +47,6 @@ const useStyle = makeStyles(theme => ({
     padding: 15,
     boxSizing: 'border-box',
     color: '#d8d8d8',
-    borderColor: '#fff',
   },
   redBordersBlockStyle: {
     borderTop: `3px solid ${theme.palette.primary.main}`,

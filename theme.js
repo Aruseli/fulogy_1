@@ -51,6 +51,15 @@ export const theme = createMuiTheme({
       lineHeight: 1.4,
       fontSize: '2.9rem',
     },
+    h5: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.07em',
+      fontWeight: 700,
+      fontSize: '3rem',
+      lineHeight: 1.3,
+      fontFamily,
+      color: '#F37E78' 
+    },
     subtitle1: {
       lineHeight: 1.4,
       fontFamily,
@@ -121,7 +130,4 @@ export const theme = createMuiTheme({
       }
     }
   },
-  bodyFontFamily: {
-    fontFamily,
-  }
 });

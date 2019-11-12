@@ -43,7 +43,6 @@ const useStyle = makeStyles(theme => ({
     padding: 15,
     boxSizing: 'border-box',
     color: '#ececec',
-    borderColor: '#fff',
   },
 }))
 

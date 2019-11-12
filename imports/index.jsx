@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import { Switch, Route } from 'react-router';
 
@@ -10,6 +10,8 @@ import {ScreenTwo} from './components/screen-two';
 import {ScreenThree} from './components/screen-three';
 import {ScreenFour} from './components/screen-four';
 import {ScreenFive} from './components/screen-five';
+import {ScreenSix} from './components/screen-six';
+
 
 export const Index = () => {
   return (
@@ -19,6 +21,7 @@ export const Index = () => {
       <ScreenThree />
       <ScreenFour />
       <ScreenFive />
+      <ScreenSix />
     </>
   )
 }

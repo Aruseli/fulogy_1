@@ -8,6 +8,8 @@ import { onPageLoad } from "meteor/server-render";
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
 import CleanCSS from 'clean-css';
+import autoprefixer from "autoprefixer";
+import postcss from 'postcss';
 
 import {App} from '../imports/index';
 
@@ -25,5 +27,18 @@ onPageLoad(sink => {
   ));
 
   const css = cleanCSS.minify(sheets.toString()).styles;
-  sink.appendToHead(`<style>${css}</style>`);
+
+  let prefixedCss;
+  Promise.await(new Promise((resolve) => {
+    postcss([ autoprefixer({ overrideBrowserslist: ['last 100 version'] }) ]).process(css, { from: 'css.css', to: 'prefixedCss.css' }).then(result => {
+      prefixedCss = result.css;
+      result.warnings().forEach(warn => {
+        prefixedCss = css;
+        console.warn(warn.toString());
+      })
+      resolve();
+    })
+  }));
+
+  sink.appendToHead(`<style>${prefixedCss}</style>`);
 });
