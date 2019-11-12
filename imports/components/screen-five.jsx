@@ -72,7 +72,7 @@ const useStyle = makeStyles(theme => ({
   clipPathBlock: {
     clipPath: 'polygon(100% 0, 100% 100%, 85% 95%, 15% 95%, 0 100%, 0 0)',
     backgroundPosition: 'center',
-    backgroundImage: "url('/Photo-8.jpg')",
+    backgroundImage: "url('/photo-2.jpg')",
     backgroundSize: 'cover',
     width: '100%',
     height: '35vh',

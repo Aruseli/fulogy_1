@@ -17,11 +17,6 @@ const useStyle = makeStyles(theme => ({
     position: 'relative', 
     paddingLeft: 90
   },
-  nudeBlockStyle: {
-    backgroundColor: theme.palette.background.default,
-    boxSizing: 'border-box',
-    padding: '32px 100px 32px 32px'
-  },
   dottedLineStyle: {
     position: 'absolute',
     right: 75,
@@ -67,6 +62,20 @@ const useStyle = makeStyles(theme => ({
     left: 45,
     transform: 'rotate(-12deg)',
   },
+  arrowStyles1: {
+    position: 'absolute',
+    width: 100,
+    right: 130,
+    transform: 'rotate(7deg)',
+    top: 375
+  },
+  arrowStyles2: {
+    position: 'absolute',
+    width: 100,
+    left: 175,
+    transform: 'rotate(-10deg)',
+    top: 600
+  },
   progressStepsStyle: {
     color: '#000', 
     opacity: 0.2,
@@ -74,7 +83,17 @@ const useStyle = makeStyles(theme => ({
     top: 7,
     left: 90,
     width: 100
-  }
+  },
+  clipPathBlock: {
+    clipPath: 'polygon(100% 0, 100% 100%, 85% 95%, 15% 95%, 0 100%, 0 0)',
+    backgroundPosition: 'center',
+    backgroundImage: "url('/Photo-12.jpg')",
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '35vh',
+    position: 'relative',
+    zIndex: 2
+  },
 }))
 
 export const ScreenSix = () => {
@@ -91,7 +110,7 @@ export const ScreenSix = () => {
           <Typography variant="h2" component='h1' gutterBottom>светильник именно у нас?</Typography>
           <div className={classes.redLineStyle} />
         </div>
-        <div style={{position: 'relative', paddingTop: 32, paddingBottom: 48}}>
+        <div style={{position: 'relative', paddingTop: 96, paddingBottom: 48}}>
           <Paper elevation={4} className={classes.progressNumberStyle}>1
             <Typography variant='body1' component='span' className={classes.progressStepsStyle}>из 7</Typography>
           </Paper>
@@ -105,7 +124,34 @@ export const ScreenSix = () => {
           </Container>
         </div>
       </div>
-      <Slider /> 
+      <Slider />
+      <div style={{position: 'relative'}}>
+        <div style={{
+          position: 'relative', 
+          boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)', 
+          boxSizing: 'border-box', 
+          padding: 80, 
+          zIndex: 222,
+          backgroundColor: '#fff'
+        }}>
+          <Typography variant='h2' component='p' align='center'>оригинальный дизайн "не&nbsp;как&nbsp;у&nbsp;всех"</Typography>
+          <Typography variant='body1' component='p' align='center'>- выглядит стильно, этетично и просто красиво!</Typography>
+        </div>
+        <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles1}/>
+        <div style={{position: 'relative', paddingTop: 128, paddingRight: 96, paddingBottom: 48}}>
+          <div className={classes.dottedLineStyle} />
+          <Container style={{paddingRight: 50}}>
+            <Typography variant='body1' component='p'>Свет, максимально направленный на рабочую зону,&ensp;
+              <Typography variant="body1" component='span' color='primary'>не бьет в глаза</Typography>. 
+              А также многие другие качества с которыми Вы ознакомитесь далее.
+            </Typography>
+          </Container>
+        </div>
+      </div>
+      <div style={{position: 'relative'}}>
+        <div className={classes.clipPathBlock} />
+        <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles2}/>
+      </div>
     </div> 
   </>  
   )

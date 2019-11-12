@@ -83,7 +83,7 @@ export const Slider = () => {
         container 
         justify='center' 
         alignItems='center'
-        style={{marginTop: 50, marginBottom: 50}}
+        style={{marginTop: 50, paddingBottom: 50}}
       >
         {items.map((item, i) => (
           <Grid item key={item.id}>
