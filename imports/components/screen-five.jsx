@@ -96,7 +96,7 @@ export const ScreenFive = () => {
         <Container>
           <Typography variant='body1' component='p' gutterBottom>Мы настолько уверены в качестве своего продукта, что 
             даем письменную гарантию качества на&ensp;
-            <Typography variant="body1" component='span' color='primary'>5 лет</Typography>&ensp;на сами изделия и на монтаж.  
+            <Typography variant="body1" component='span' color='primary'>5&ensp;лет</Typography>&ensp;на сами изделия и на монтаж.  
           </Typography>
         </Container>
       </div> 

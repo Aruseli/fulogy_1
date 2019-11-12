@@ -11,6 +11,7 @@
     "@babel/runtime": "^7.3.4",
     "@material-ui/core": "^4.6.0",
     "@material-ui/styles": "^4.6.0",
+    "autoprefixer": "^9.7.1",
     "clean-css": "^4.2.1",
     "jss-plugin-vendor-prefixer": "^10.0.0",
     "meteor-node-stubs": "^0.4.1",
@@ -23,6 +24,11 @@
     "mainModule": {
       "client": "client/index.jsx",
       "server": "server/index.js"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {"browsers": ["last 2 versions"]}
     }
   }
 }

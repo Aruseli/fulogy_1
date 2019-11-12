@@ -5,13 +5,14 @@ import {makeStyles, Typography, Container, Paper} from '@material-ui/core';
 const useStyle = makeStyles(theme => ({
   handBlockStyle: {
     backgroundImage: "url('/hand.png')",
-    backgroundPosition: -67,
+    backgroundPosition: 'left',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     width: '100%',
     height: 200,
     position: 'absolute',
     top: 123,
+    left: -67,
     zIndex: -1
   },
   dottedLineStyle: {
