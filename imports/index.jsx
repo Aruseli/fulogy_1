@@ -14,6 +14,7 @@ import {ScreenSix} from './components/screen-six';
 import {ScreenSeven} from './components/screen-seven';
 import {ScreenEight} from './components/screen-eight';
 import {ScreenNine} from './components/screen-nine';
+import {Footer} from './components/footer';
 
 
 export const Index = () => {
@@ -28,6 +29,7 @@ export const Index = () => {
       <ScreenSeven />
       <ScreenEight />
       <ScreenNine />
+      <Footer />
     </>
   )
 }
