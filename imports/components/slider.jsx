@@ -28,25 +28,9 @@ const useStyle = makeStyles(theme => ({
   },
 }))
 
-const items = [
-  {
-    id: 1,
-    src: '/Photo-9.png',
-    alt: 'подсветка кухни'
-  },
-  {
-    id: 2,
-    src: '/Photo-10.png',
-    alt: 'подсветка кухни'
-  },
-  {
-    id: 3,
-    src: '/Photo-11.jpg',
-    alt: 'подсветка кухни'
-  }
-]
 
-export const Slider = () => {
+
+export const Slider = ({ items = [] }) => {
   const classes = useStyle();
   const [selectedId, setSelectedId] = useState(2);
   const selectedIndex = items.findIndex(item => item.id == selectedId);

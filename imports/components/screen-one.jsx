@@ -95,15 +95,3 @@ export const ScreenOne = () => {
     </>
   )
 }
-
-
-{/* <Button variant="contained" color="primary">123</Button>
-<Button variant="contained" color="secondary">123</Button>
-<Button variant="contained">123</Button>
-<Button variant="contained" color="primary" disabled>123</Button>
-<Button variant="contained" color="secondary" disabled>123</Button>
-<Button variant="contained" disabled>123</Button>
-<Button variant="outlined">123</Button>
-<Button variant='text' disableRipple>123</Button>
-<Paper elevation={4} square>1</Paper>
-<div className={classes.pinkBlock}>adafgdhs</div> */}
