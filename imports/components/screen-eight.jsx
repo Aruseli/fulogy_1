@@ -28,11 +28,6 @@ const useStyle = makeStyles(theme => ({
     position: 'relative', 
     paddingLeft: 90
   },
-  nudeBlockStyle: {
-    backgroundColor: theme.palette.background.default,
-    boxSizing: 'border-box',
-    padding: '32px 100px 32px 32px'
-  },
   dottedLineStyle: {
     position: 'absolute',
     right: 75,
@@ -205,7 +200,7 @@ export const ScreenEight = () => {
           </Typography>
         </div>
       </div>
-      <div style={{position: 'relative', paddingTop: 80, paddingRight: 32, paddingBottom: 48}}>
+      <div style={{position: 'relative', paddingTop: 80, paddingRight: 32}}>
         <div className={classes.dottedLineStyle} />
         <Container>
           <List disablePadding>
