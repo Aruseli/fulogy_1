@@ -4,6 +4,8 @@ import { Switch, Route } from 'react-router';
 
 import { ThemeProvider } from '@material-ui/core/styles';
 
+import { AnaliticsProvider } from './package/analitics';
+
 import {theme} from '../theme';
 import {ScreenOne} from './components/screen-one';
 import {ScreenTwo} from './components/screen-two';
@@ -37,10 +39,16 @@ export const Index = () => {
 export const App = () => {
 
   return (
-    <ThemeProvider theme={theme}>
-      <Switch>
-        <Route path='/' component={Index} />
-      </Switch>
-    </ThemeProvider>
+    <AnaliticsProvider
+      facebookPixel={null}
+      googleAnalitics={null}
+      yandexMetrika={null}
+    >
+      <ThemeProvider theme={theme}>
+        <Switch>
+          <Route path='/' component={Index} />
+        </Switch>
+      </ThemeProvider>
+    </AnaliticsProvider>
   )
 }

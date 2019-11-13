@@ -34,7 +34,7 @@ export const ScreenOne = () => {
 
   return (
     <>
-      <div style={{marginBottom: '3.8rem'}}>
+      <div style={{marginTop: 32, marginBottom: '3.8rem'}}>
         <Grid
           container
           justify='space-between'
@@ -84,11 +84,12 @@ export const ScreenOne = () => {
           <Typography variant="subtitle1" component="p">- создаем комфорт<br/>для Вашей кухни</Typography>
         </Grid>
       </Grid>
-      <Grid container justify='center' alignItems='center' style={{position: 'relative'}}>
-        <Grid item style={{
+      <Grid container justify='center' alignItems='center' style={{
           position: 'absolute',
-          bottom: -50,
+          bottom: -20,
+          width: '100%'
         }}>
+        <Grid item>
           <Button fullWidth variant="contained" color="primary" size="large">Рассчитать стоимость</Button>
         </Grid>
       </Grid>

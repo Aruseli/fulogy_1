@@ -3,8 +3,7 @@ import React from 'react';
 import {
   Grid, 
   makeStyles, 
-  Typography, 
-  Container, 
+  Typography,  
   Button, 
   List, 
   ListItem, 
@@ -21,6 +20,10 @@ const useStyle = makeStyles(theme => ({
     padding: '96px 32px',
     marginTop: 112,
   },
+  labelButtonStyle: {
+    textTransform: 'none',
+    textAlign: 'center'
+  }
 }))
 
 export const Footer = () => {
@@ -88,6 +91,63 @@ export const Footer = () => {
           </Grid>
           <Grid item xs={3}>
             <img src='/Photo-22.png' alt='Халва' className={classes.arrowStyles2} style={{width: '100%'}} />
+          </Grid>
+        </Grid>
+      </div>
+      <div style={{paddingTop: 112, paddingBottom: 112}}>
+        <Grid
+          container
+          justify='center'
+          alignItems='center'
+        >
+          <Grid item xs={4}>
+            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+              <Typography variant='body1' component='h2' align='center'>
+                Google+
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
+            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+              <Typography variant='body1' component='h2' align='center'>
+                Facebook
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
+            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+              <Typography variant='body1' component='h2' align='center'>
+                Instagram
+              </Typography>
+            </Button>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          justify='center'
+          alignItems='center'
+          style={{marginTop: 64}}
+        >
+          <Grid item xs={4}>
+            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+              <Typography variant='body1' component='h2' align='center'>
+                Vk
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
+            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+              <Typography variant='body1' component='h2' align='center'>
+                YouTube
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
+            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+              <Typography variant='body1' component='h2' align='center'>
+                Feet
+              </Typography>
+            </Button>
           </Grid>
         </Grid>
       </div>

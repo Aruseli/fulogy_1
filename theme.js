@@ -92,9 +92,11 @@ export const theme = createMuiTheme({
         color: '#fff',
         boxShadow: '0px 5px 5px 0 rgba(0, 0, 0, .1)',
         '&:hover': {
-          backgroundColor: '#F37E78',
           boxShadow: '0 0 0 0 #fff !important'
         },
+        '&:active': {
+          boxShadow: '0 0 0 0 #fff !important'
+        }
       },
       containedPrimary: {
         color: '#fff',
@@ -104,6 +106,15 @@ export const theme = createMuiTheme({
       },
       outlined: {
         border: '1px solid #F37E78',
+        '&:active': {
+          backgroundColor: '#F37E78',
+          color: '#fff',
+        },
+      },
+      text: {
+        '&:active': {
+          color: '#F37E78',
+        }
       },
       sizeSmall: {
         padding: '15px 25px',
@@ -127,6 +138,11 @@ export const theme = createMuiTheme({
     MuiTypography: {
       gutterBottom: {
         marginBottom: '3.5rem'
+      }
+    },
+    MuiTouchRipple: {
+      root: {
+        color: '#fff'
       }
     }
   },
