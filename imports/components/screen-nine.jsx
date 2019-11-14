@@ -129,7 +129,7 @@ export const ScreenNine = () => {
       alignItems='center'
     >
       <Grid item xs={9}>
-        <Button fullWidth variant="contained" color="primary" size="large">Пройти тест</Button>
+        <Button fullWidth variant="contained" color="primary" size="large" href='https://constructor.fulogy.com/quiz' target='_blank'>Пройти тест</Button>
       </Grid>
     </Grid>
     </>  
