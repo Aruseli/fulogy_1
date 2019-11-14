@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { useEffect, createContext } from 'react';
+import React, { useEffect, createContext, useState } from 'react';
 import { useLocation } from "react-router-dom";
 
 import ReactPixel from 'react-facebook-pixel';
@@ -19,6 +19,7 @@ export const Context = createContext({});
  *
  * @param {object} props
  * @param {number=} props.facebookPixel
+ * @param {number=} props.facebookTimeout
  * @param {string=} props.googleAnalitics
  * @param {number=} props.yandexMetrika
  * @param {*=} props.children
@@ -26,6 +27,7 @@ export const Context = createContext({});
  */
 export const AnaliticsProvider = ({
   facebookPixel = null,
+  facebookTimeout = 0,
   googleAnalitics = null,
   yandexMetrika = null,
   context = Context,
@@ -33,6 +35,7 @@ export const AnaliticsProvider = ({
 }) => {
   const router = useLocation();
   const pathname = router ? router.pathname : null;
+  const [facebookReady, setFacebookReady] = useState(false);
 
   const content = (
     <context.Provider
@@ -49,7 +52,7 @@ export const AnaliticsProvider = ({
                 value: data ? data.value : undefined,
               });
             if (yandexMetrika) ya('reachGoal', action, data);
-            if (facebookPixel) ReactPixel.trackCustom(action, data);
+            if (facebookPixel && facebookReady) ReactPixel.trackCustom(action, data);
           } catch (error) {
             console.error(error);
           }
@@ -66,15 +69,20 @@ export const AnaliticsProvider = ({
     if (!localStorage.getItem('_analiticsUserId')) {
       localStorage.setItem('_analiticsUserId', generateUserId());
     }
-    if (facebookPixel) {
-      const facebookPixelAdvancedMatching = {
-        userId: localStorage.getItem('_analiticsUserId'),
-      };
-      ReactPixel.init(facebookPixel, facebookPixelAdvancedMatching, {
-        autoConfig: true,
-        debug: true,
-      });
-    }
+    
+    setTimeout(() => {
+      setFacebookReady(true);
+      if (facebookPixel) {
+        const facebookPixelAdvancedMatching = {
+          userId: localStorage.getItem('_analiticsUserId'),
+        };
+        ReactPixel.init(facebookPixel, facebookPixelAdvancedMatching, {
+          autoConfig: true,
+          debug: true,
+        });
+      }
+    }, facebookTimeout); 
+
     if (googleAnalitics) {
       ReactGA.initialize(googleAnalitics, {
         gaOptions: {
@@ -87,7 +95,7 @@ export const AnaliticsProvider = ({
   useEffect(() => {
     if (Meteor.isServer || !pathname) return;
 
-    if (facebookPixel) ReactPixel.pageView();
+    if (facebookPixel && facebookReady) ReactPixel.pageView();
     if (googleAnalitics) {
       ReactGA.set({ page: pathname });
       ReactGA.pageview(pathname);
