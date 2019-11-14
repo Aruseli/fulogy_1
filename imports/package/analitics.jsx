@@ -80,6 +80,7 @@ export const AnaliticsProvider = ({
           autoConfig: true,
           debug: true,
         });
+        ReactPixel.pageView();
       }
     }, facebookTimeout); 
 
