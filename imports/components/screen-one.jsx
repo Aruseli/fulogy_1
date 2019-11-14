@@ -16,12 +16,12 @@ const useStyle = makeStyles(theme => ({
   },
   clipPathBlock: {
     clipPath: 'polygon(85% 0, 100% 5%, 100% 100%, 0 100%, 0 5%, 15% 0)',
-    backgroundPosition: 'top',
+    backgroundPosition: '30%',
     backgroundImage: "url('/photo.jpg'), linear-gradient(#00000003, #0000009e)",
     backgroundBlendMode: 'saturation',
-    backgroundSize: 'cover',
+    backgroundSize: '1800px 1260px',
     width: '100%',
-    height: '65vh',
+    height: '55vh',
     position: 'relative'
   },
   clipPathText: {
