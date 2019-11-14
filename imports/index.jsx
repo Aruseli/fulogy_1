@@ -63,7 +63,7 @@ export const App = () => {
 
   return (
     <AnaliticsProvider
-      facebookPixel={'554646578660172'}
+      facebookPixel={'1245714662288364'}
       googleAnalitics={'UA-56824740-6'}
       yandexMetrika={56224693}
     >
