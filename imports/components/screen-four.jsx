@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 
 import {
   makeStyles, 
@@ -8,7 +8,7 @@ import {
   Grid
 } from '@material-ui/core';
 
-import {Form} from './form';
+import {DialogContext} from '../index';
 
 const useStyle = makeStyles(theme => ({
   handBlockStyle: {
@@ -101,12 +101,13 @@ const useStyle = makeStyles(theme => ({
 
 export const ScreenFour = () => {
   const classes = useStyle();
-  const [open, setOpen] = useState(false);
+  const {setDialog, open} = useContext(DialogContext);
 
-  const handlerEvent = () => {
-    console.log({ open });
-    setOpen(!open);
-  }     
+  const handlerEvent = () => setDialog({ 
+    open: !open,
+    title: <Typography variant='h3' component="h1" align='center'>чтобы рассчитать стоимость светильника</Typography>,
+    bottom: <>Рассчитать стоимость</>
+  });   
   
   return(
     <>
@@ -158,7 +159,6 @@ export const ScreenFour = () => {
           </Grid>
         </Grid>
       </div>
-      <Form onClick={handlerEvent} open={open} />
     </>  
   )
 }

@@ -61,7 +61,7 @@ export const AnaliticsProvider = ({
   );
 
   useEffect(() => {
-    if (!_.get(process, 'browser') || !pathname) return;
+    if (Meteor.isServer || !pathname) return;
 
     if (!localStorage.getItem('_analiticsUserId')) {
       localStorage.setItem('_analiticsUserId', generateUserId());
@@ -72,7 +72,7 @@ export const AnaliticsProvider = ({
       };
       ReactPixel.init(facebookPixel, facebookPixelAdvancedMatching, {
         autoConfig: true,
-        debug: false,
+        debug: true,
       });
     }
     if (googleAnalitics) {
@@ -85,7 +85,7 @@ export const AnaliticsProvider = ({
   }, []);
 
   useEffect(() => {
-    if (!_.get(process, 'browser') || !pathname) return;
+    if (Meteor.isServer || !pathname) return;
 
     if (facebookPixel) ReactPixel.pageView();
     if (googleAnalitics) {
@@ -94,11 +94,10 @@ export const AnaliticsProvider = ({
     }
   }, [pathname]);
 
-  if (!_.get(process, 'browser') || !pathname) return content;
-
   return (
     <>
-      {!!yandexMetrika && <YMInitializer
+      {content}
+      {(Meteor.isClient && !!yandexMetrika && !!pathname) && <YMInitializer
         accounts={[yandexMetrika]}
         options={{
           clickmap: true,
@@ -112,7 +111,6 @@ export const AnaliticsProvider = ({
         }}
         version="2"
       />}
-      {content}
     </>
   );
 };

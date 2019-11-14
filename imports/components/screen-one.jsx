@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 
 import {
   Grid,
@@ -7,8 +7,7 @@ import {
   Typography
 } from '@material-ui/core';
 
-import {Form} from './form';
-
+import {DialogContext} from '../index';
 
 const useStyle = makeStyles(theme => ({
   pinkBlock: {
@@ -33,12 +32,13 @@ const useStyle = makeStyles(theme => ({
 
 export const ScreenOne = () => {
   const classes = useStyle();
-  const [open, setOpen] = useState(false);
+  const {setDialog, open} = useContext(DialogContext);
 
-  const handlerEvent = () => {
-    console.log({ open });
-    setOpen(!open);
-  }
+  const handlerEvent = () => setDialog({ 
+    open: !open, 
+    title: <Typography variant='h3' component="h1" align='center'>чтобы заказать звонок</Typography>,
+    bottom: <>Заказать звонок</>
+  });
 
   return (
     <>
@@ -63,7 +63,7 @@ export const ScreenOne = () => {
                 <a href='tel: 8(800) 505 65 33' style={{
                   textDecoration: 'none', 
                   color: '#000', 
-                  fontSize: 34}}>8(800) 505 65 33</a>
+                  fontSize: 34}}>8 800 505-65-33</a>
               </Grid>
               <Grid item style={{paddingRight: 35}}>
                 <Button variant="outlined" size="small" onClick={handlerEvent}>Заказать звонок</Button>
@@ -101,7 +101,6 @@ export const ScreenOne = () => {
           <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
         </Grid>
       </Grid>
-      <Form onClick={handlerEvent} open={open} />
     </>
   )
 }

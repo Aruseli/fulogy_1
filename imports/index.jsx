@@ -3,9 +3,11 @@ import React, {useState} from 'react';
 import { Switch, Route } from 'react-router';
 
 import { ThemeProvider } from '@material-ui/core/styles';
+import {Typography} from '@material-ui/core';
 
 import { AnaliticsProvider } from './package/analitics';
 
+import {Form} from './components/form';
 import {theme} from '../theme';
 import {ScreenOne} from './components/screen-one';
 import {ScreenTwo} from './components/screen-two';
@@ -18,7 +20,7 @@ import {ScreenEight} from './components/screen-eight';
 import {ScreenNine} from './components/screen-nine';
 import {Footer} from './components/footer';
 
-export const TitleValue = React.createContext();
+export const DialogContext = React.createContext();
 
 export const Index = () => {
   return (
@@ -37,21 +39,41 @@ export const Index = () => {
   )
 }
 
+export const DialogContextProvider = ({ children }) => {
+  const [dialogConfig, setDialogConfig] = useState({
+    open: false,
+    title: <Typography variant='h3' component="h1" align='center'>чтобы рассчитать стоимость светильника</Typography>,
+    bottom: <>Рассчитать стоимость</>,
+    thanks: false
+  });
+
+  const setDialog = (config) => {
+    setDialogConfig({ ...dialogConfig, ...config });
+    if (dialogConfig.thanks) setTimeout(() => {
+      setDialogConfig({ ...dialogConfig, ...config, thanks: false });
+    }, 1000);
+  };
+
+  return <DialogContext.Provider value={{...dialogConfig, setDialog}}>
+    {children}
+  </DialogContext.Provider>;
+};
+
 export const App = () => {
-  const [title, setTitle] = useState();
 
   return (
     <AnaliticsProvider
-      facebookPixel={null}
-      googleAnalitics={null}
-      yandexMetrika={null}
+      facebookPixel={'554646578660172'}
+      googleAnalitics={'UA-56824740-6'}
+      yandexMetrika={56224693}
     >
       <ThemeProvider theme={theme}>
-        <TitleValue.Provider>
+        <DialogContextProvider>
+          <Form />
           <Switch>
             <Route path='/' component={Index} />
           </Switch>
-        </TitleValue.Provider>
+        </DialogContextProvider>
       </ThemeProvider>
     </AnaliticsProvider>
   )

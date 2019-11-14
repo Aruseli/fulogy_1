@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 
 import {Grid, makeStyles, Typography, Container, Paper, Button} from '@material-ui/core';
 
-import {Form} from './form';
+import {DialogContext} from '../index';
 
 const useStyle = makeStyles(theme => ({
   progressNumberStyle: {
@@ -93,11 +93,13 @@ const useStyle = makeStyles(theme => ({
 
 export const ScreenSeven = () => {
   const classes = useStyle();
-  const [open, setOpen] = useState(false);
+  const {setDialog, open} = useContext(DialogContext);
 
-  const handlerEvent = () => {
-    console.log({ open });
-    setOpen(!open);
+  const handlerEvent = (config) => () => {
+    setDialog({ 
+      ...config,
+      open: !open 
+    });
   }
   
   return(
@@ -201,13 +203,22 @@ export const ScreenSeven = () => {
         нажмите на кнопку ниже:</Typography>
         <Grid display='column' container justify='center' alignItems='center' spacing={10}>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Оставить заявку</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent({
+              title: <Typography variant='h3' component="h1" align='center'>чтобы оставить заявку</Typography>,
+              bottom: <>Оставить заявку</>
+            })}>Оставить заявку</Button>
           </Grid>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Задать вопрос</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent({
+              title: <Typography variant='h3' component="h1" align='center'>чтобы задать вопрос</Typography>,
+              bottom: <>Задать вопрос</>
+            })}>Задать вопрос</Button>
           </Grid>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Заказать звонок</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent({
+              title: <Typography variant='h3' component="h1" align='center'>чтобы заказать звонок</Typography>,
+              bottom: <>Заказать звонок</>
+            })}>Заказать звонок</Button>
           </Grid>
           <Grid item xs={9}>
             <Typography variant="body1" component='h2' align='center'>
@@ -222,7 +233,6 @@ export const ScreenSeven = () => {
           </Grid>
         </Grid>
       </div>
-      <Form onClick={handlerEvent} open={open} />
     </>  
   )
 }
