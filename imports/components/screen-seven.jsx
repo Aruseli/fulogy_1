@@ -77,7 +77,7 @@ const useStyle = makeStyles(theme => ({
     backgroundImage: "url('/Photo-13.jpg')",
     backgroundSize: 'cover',
     width: '100%',
-    height: '35vh',
+    height: '25vh',
     position: 'relative',
     zIndex: 2
   },

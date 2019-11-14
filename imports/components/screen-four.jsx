@@ -1,6 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {makeStyles, Typography, Container, Paper} from '@material-ui/core';
+import {
+  makeStyles, 
+  Typography, 
+  Container, 
+  Button, 
+  Grid
+} from '@material-ui/core';
+
+import {Form} from './form';
 
 const useStyle = makeStyles(theme => ({
   handBlockStyle: {
@@ -54,7 +62,7 @@ const useStyle = makeStyles(theme => ({
     backgroundImage: "url('/Photo-5.jpg')",
     backgroundSize: 'cover',
     width: '100%',
-    height: '35vh',
+    height: '25vh',
     position: 'relative',
     zIndex: 2
   },
@@ -64,7 +72,7 @@ const useStyle = makeStyles(theme => ({
     backgroundImage: "url('/Photo-6.jpg')",
     backgroundSize: 'cover',
     width: '100%',
-    height: '35vh',
+    height: '25vh',
     position: 'relative',
     zIndex: 2
   },
@@ -93,6 +101,12 @@ const useStyle = makeStyles(theme => ({
 
 export const ScreenFour = () => {
   const classes = useStyle();
+  const [open, setOpen] = useState(false);
+
+  const handlerEvent = () => {
+    console.log({ open });
+    setOpen(!open);
+  }     
   
   return(
     <>
@@ -111,8 +125,8 @@ export const ScreenFour = () => {
         <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles1}/>
         <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles2}/>
         <div style={{boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)'}}>
-          <Typography variant='h4' component='p' align='center' style={{padding: 64}}>подробнее 
-            ознакомиться с необычными свойствами светильника вы можете<br />на этой странице
+          <Typography variant='body2' component='p' align='center' style={{padding: 64}}>подробнее 
+            ознакомиться с необычными свойствами светильника вы можете<br />на этой странице ниже
           </Typography>
         </div>
       </div>
@@ -134,7 +148,17 @@ export const ScreenFour = () => {
         Вы получаете оригинальную продукцию от компании&ensp;
             <Typography variant="body1" component='span' style={{color: '#241E4C'}}>Fulogy</Typography>&ensp;
         </Typography>
+        <Grid 
+          container
+          justify='center'
+          alignItems='center'
+        >
+          <Grid item xs={9}>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
+          </Grid>
+        </Grid>
       </div>
+      <Form onClick={handlerEvent} open={open} />
     </>  
   )
 }

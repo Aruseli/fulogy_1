@@ -58,17 +58,17 @@ const useStyle = makeStyles(theme => ({
     backgroundImage: "url('/Photo-14.png')",
     backgroundSize: 'cover',
     width: '100%',
-    height: '35vh',
+    height: '25vh',
     position: 'relative',
     zIndex: 2
   },
   clipPathBlock2: {
     clipPath: 'polygon(100% 0, 100% 100%, 85% 95%, 15% 95%, 0 100%, 0 0)',
-    backgroundPosition: 'center',
+    backgroundPosition: 'top',
     backgroundImage: "url('/Photo-18.jpg')",
     backgroundSize: 'cover',
     width: '100%',
-    height: '35vh',
+    height: '25vh',
     position: 'relative',
     zIndex: 2
   },

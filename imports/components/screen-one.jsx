@@ -77,10 +77,10 @@ export const ScreenOne = () => {
         display='column'
         justify='center'
         alignItems='center'
-        style={{marginBottom: 60}}
+        style={{marginBottom: 32}}
       >
         <Grid item xs={8}>
-          <Typography variant="h1" component="h1" color='primary' align='center' gutterBottom>Светодиодный светильник</Typography>
+          <Typography variant="h1" component="h1" color='primary' align='center'>Светодиодный светильник</Typography>
         </Grid>
         <Grid item xs={8}>
           <Typography variant="subtitle1" component="p" color='secondary' align='center'>премиального качества для рабочей зоны кухни!</Typography>
