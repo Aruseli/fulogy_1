@@ -144,6 +144,11 @@ export const theme = createMuiTheme({
       root: {
         color: '#fff'
       }
+    },
+    MuiInput: {
+      input: {
+        fontSize: '3rem'
+      }
     }
   },
 });

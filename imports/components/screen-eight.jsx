@@ -139,7 +139,7 @@ export const ScreenEight = () => {
               />
             </ListItem>
           </List>
-          <Typography variant='body1' component='p'>
+          <Typography variant='body1' component='div'>
             <Typography variant='h5' component='h3'>светодиодны высокой светопередачи,</Typography>
             что делает свет приближенным к естественному солнечному цвету, и Вы видите предметы привычно, 
             как и при дневном свете.

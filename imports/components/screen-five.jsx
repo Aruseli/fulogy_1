@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Grid, makeStyles, Typography, Container, Paper, Button} from '@material-ui/core';
+
+import {Form} from './form';
 
 const useStyle = makeStyles(theme => ({
   redLineStyle: {
@@ -83,6 +85,12 @@ const useStyle = makeStyles(theme => ({
 
 export const ScreenFive = () => {
   const classes = useStyle();
+  const [open, setOpen] = useState(false);
+
+  const handlerEvent = () => {
+    console.log({ open });
+    setOpen(!open);
+  }
   
   return(
     <>
@@ -147,25 +155,28 @@ export const ScreenFive = () => {
         нажмите на кнопку ниже:</Typography>
         <Grid display='column' container justify='center' alignItems='center' spacing={10}>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large">Рассчитать стоимость</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
           </Grid>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large">Задать вопрос</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Задать вопрос</Button>
           </Grid>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large">Заказать звонок</Button>
-          </Grid>
-          <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large">Заказать звонок</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Заказать звонок</Button>
           </Grid>
           <Grid item xs={9}>
             <Typography variant="body1" component='h2' align='center'>
           или звоните по телефону</Typography>
             <Typography variant="h4" component='p' align='center'>
-            8 800 505 65 33</Typography>
+              <a href='tel: 8(800) 505 65 33' style={{
+                textDecoration: 'none', 
+                color: '#000',
+                }}>8(800) 505 65 33
+              </a>
+            </Typography>
           </Grid>
         </Grid>
       </div>
+      <Form onClick={handlerEvent} open={open} />
     </>  
   )
 }

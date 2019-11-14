@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   Grid,
@@ -6,6 +6,8 @@ import {
   Button,
   Typography
 } from '@material-ui/core';
+
+import {Form} from './form';
 
 
 const useStyle = makeStyles(theme => ({
@@ -31,6 +33,12 @@ const useStyle = makeStyles(theme => ({
 
 export const ScreenOne = () => {
   const classes = useStyle();
+  const [open, setOpen] = useState(false);
+
+  const handlerEvent = () => {
+    console.log({ open });
+    setOpen(!open);
+  }
 
   return (
     <>
@@ -58,7 +66,7 @@ export const ScreenOne = () => {
                   fontSize: 34}}>8(800) 505 65 33</a>
               </Grid>
               <Grid item style={{paddingRight: 35}}>
-                <Button variant="outlined" size="small">Заказать звонок</Button>
+                <Button variant="outlined" size="small" onClick={handlerEvent}>Заказать звонок</Button>
               </Grid>
             </Grid>
           </Grid> 
@@ -85,14 +93,15 @@ export const ScreenOne = () => {
         </Grid>
       </Grid>
       <Grid container justify='center' alignItems='center' style={{
-          position: 'absolute',
-          bottom: -20,
+          position: 'relative',
+          bottom: 60,
           width: '100%'
         }}>
         <Grid item>
-          <Button fullWidth variant="contained" color="primary" size="large">Рассчитать стоимость</Button>
+          <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
         </Grid>
       </Grid>
+      <Form onClick={handlerEvent} open={open} />
     </>
   )
 }

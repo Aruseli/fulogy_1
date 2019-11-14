@@ -33,7 +33,6 @@ export const AnaliticsProvider = ({
 }) => {
   const router = useLocation();
   const pathname = router ? router.pathname : null;
-  console.log({router});
 
   const content = (
     <context.Provider
