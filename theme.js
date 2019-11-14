@@ -147,7 +147,8 @@ export const theme = createMuiTheme({
     },
     MuiInput: {
       input: {
-        fontSize: '3rem'
+        fontSize: '3rem',
+        marginTop: 48
       }
     }
   },

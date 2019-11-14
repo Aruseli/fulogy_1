@@ -59,7 +59,11 @@ export const Footer = () => {
             </ListItemIcon>
             <ListItemText primary={
               <Typography variant='body1' component='p'>
-                8 800 505 65 33
+                <a href='tel: 8(800) 505 65 33' style={{
+                  textDecoration: 'none', 
+                  color: '#000',
+                  }}>8(800) 505 65 33
+                </a>
               </Typography>
             } />
           </ListItem>
@@ -76,17 +80,17 @@ export const Footer = () => {
         </List>
         <Grid
           container
-          justify='center'
+          justify='space-around'
           alignItems='center'
           display='row'
         >
-          <Grid item xs={3}>
+          <Grid item xs={1}>
             <img src='/Photo-19.png' alt='Master Card' className={classes.arrowStyles2} style={{width: '100%'}} />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <img src='/Photo-20.png' alt='Visa' className={classes.arrowStyles2} style={{width: '100%'}} />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <img src='/icon/mir-logo.svg' alt='платежная система мир' className={classes.arrowStyles2} style={{width: '100%'}} />
           </Grid>
           <Grid item xs={3}>
