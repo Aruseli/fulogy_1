@@ -1,13 +1,10 @@
 import React from 'react';
 
 import {
-  makeStyles, 
-  Grid, 
+  makeStyles,  
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
-  DialogContentText,
   TextField,
   IconButton,
   Typography,

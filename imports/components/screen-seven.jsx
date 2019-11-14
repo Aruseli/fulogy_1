@@ -107,10 +107,10 @@ export const ScreenSeven = () => {
           <Paper elevation={4} className={classes.progressNumberStyle}>2</Paper>
           <Typography variant='h5' component='h2' align='center' style={{paddingTop: 64}} gutterBottom>собственное<br />производство</Typography>
           <Container style={{paddingRight: 48}}>
-            <Typography variant='body1' component='p'>Собственная разработка изделий и комплектующих, позволяет 
+            <Typography variant='body1' component='p'>Собственная разработка изделий и комплектующих позволяет 
                 нам гарантировать максимальную согласованность комплектующих между собой и запас прочности более чем&ensp;
               <Typography variant="body1" component='span' color='primary'>на&nbsp;10-летний&nbsp;срок&nbsp;службы,
-                </Typography>&ensp;а также, оптимальное сочетание цены и качества.
+                </Typography>&ensp;а также оптимальное сочетание цены и качества.
             </Typography>
           </Container>
       </div>
@@ -146,7 +146,7 @@ export const ScreenSeven = () => {
           мы не ищем виноватых и не ищем причины отказать в замене - мы просто&ensp;
               <Typography variant="body1" component='span' color='primary'>
                 меняем светильник на новый
-              </Typography>&ensp;или устраняем проблемы только за наш счет.
+              </Typography>&ensp;или устраняем проблемы за наш счет.
         </Typography>
       </div>
       <div style={{position: 'relative', paddingTop: 112, paddingBottom: 64}}>   
@@ -155,7 +155,7 @@ export const ScreenSeven = () => {
         <Typography variant='h5' component='h2' align='center' style={{paddingTop: 64}} gutterBottom>цена<br />производителя</Typography>
         <Container style={{paddingRight: 48, paddingBottom: 48}}>
           <Typography variant='body1' component='p'>
-            Посколько светильник, это наша собственная разработка, Вы не  переплачиваете посредникам.
+            Посколько светильник - это наша собственная разработка, Вы не  переплачиваете посредникам.
           </Typography>
         </Container>
         <div className={classes.redBordersBlockStyle}>
@@ -175,7 +175,7 @@ export const ScreenSeven = () => {
           </Typography>
           <Container style={{paddingRight: 48}}>
             <Typography variant='body1' component='p'>
-              Мы выполняем для своих заказчиков гарантийное, а также постгарантийное обслуживание и стремимся
+              Мы выполняем для своих заказчиков гарантийное и постгарантийное обслуживание и стремимся
               максимально продлить срок службы наших изделий.
             </Typography>
           </Container>
@@ -201,7 +201,7 @@ export const ScreenSeven = () => {
         нажмите на кнопку ниже:</Typography>
         <Grid display='column' container justify='center' alignItems='center' spacing={10}>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Оставить заявку</Button>
           </Grid>
           <Grid item xs={9}>
             <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Задать вопрос</Button>
@@ -216,7 +216,7 @@ export const ScreenSeven = () => {
               <a href='tel: 8(800) 505 65 33' style={{
                 textDecoration: 'none', 
                 color: '#000',
-                }}>8(800) 505 65 33
+                }}>8 800 505-65-33
               </a>
             </Typography>
           </Grid>

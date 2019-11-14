@@ -103,8 +103,8 @@ export const ScreenFive = () => {
         </div>
         <Container>
           <Typography variant='body1' component='p' gutterBottom>Мы настолько уверены в качестве своего продукта, что 
-            даем письменную гарантию качества на&ensp;
-            <Typography variant="body1" component='span' color='primary'>5&ensp;лет</Typography>&ensp;на сами изделия и на монтаж.  
+            даем письменную&ensp;
+            <Typography variant="body1" component='span' color='primary'>5-летнюю</Typography>&ensp;гарантию на готовое изделие и монтаж.  
           </Typography>
         </Container>
       </div> 
@@ -138,11 +138,11 @@ export const ScreenFive = () => {
         <div className={classes.dottedLineStyle} />     
         <Typography variant='body1' component='p' align='center' style={{padding: 64}}>
           Поэтому мы создаем удобство готовки на кухне, что влияет на вкус блюд и на 
-          желание готовить.
+          само желание готовить.
         </Typography>
       </div>
       <div style={{boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)', boxSizing: 'border-box', padding: 80}}>
-        <Typography variant='h2' component='p' align='center'>вся наша работа</Typography>
+        <Typography variant='h2' component='p' align='center'>И вся наша работа</Typography>
         <Typography variant='body1' component='p' align='center'>направлена именно на это.<br />
           <Typography variant="body1" component='span' color='primary'>Вы&nbsp;будете приходить к нам снова</Typography>&ensp;и&nbsp;приведете друзей и знакомых.  
         </Typography>
@@ -155,7 +155,7 @@ export const ScreenFive = () => {
         нажмите на кнопку ниже:</Typography>
         <Grid display='column' container justify='center' alignItems='center' spacing={10}>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Оставить заявку</Button>
           </Grid>
           <Grid item xs={9}>
             <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Задать вопрос</Button>
@@ -170,7 +170,7 @@ export const ScreenFive = () => {
               <a href='tel: 8(800) 505 65 33' style={{
                 textDecoration: 'none', 
                 color: '#000',
-                }}>8(800) 505 65 33
+                }}>8 800 505-65-33
               </a>
             </Typography>
           </Grid>

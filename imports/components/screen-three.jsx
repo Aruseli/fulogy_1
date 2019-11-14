@@ -99,7 +99,7 @@ export const ScreenThree = () => {
         Кроме этого, он выглядит очень эстетично и просто красиво!</Typography>
       </div> 
       <div className={classes.redBordersBlockStyle}>
-        <Typography variant='body1' component='p'>Мы изготовим для Вас светильик на 
+        <Typography variant='body1' component='p'>Мы изготовим для Вас светильник на 
           заказ по индивидуальным размерам, вплоть до&ensp;
           <Typography variant="body1" component='span' color='primary'>МИЛЛИМЕТРА</Typography>&ensp;
           без видимых стыков (соединений).
@@ -113,7 +113,7 @@ export const ScreenThree = () => {
         нажмите на кнопку ниже:</Typography>
         <Grid display='column' container justify='center' alignItems='center' spacing={10}>
           <Grid item xs={9}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Рассчитать стоимость</Button>
+            <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Оставить заявку</Button>
           </Grid>
           <Grid item xs={9}>
             <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent}>Задать вопрос</Button>
@@ -128,7 +128,7 @@ export const ScreenThree = () => {
               <a href='tel: 8(800) 505 65 33' style={{
                 textDecoration: 'none', 
                 color: '#000',
-                }}>8(800) 505 65 33
+                }}>8 800 505-65-33
               </a>
             </Typography>
           </Grid>

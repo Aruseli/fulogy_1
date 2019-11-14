@@ -126,7 +126,7 @@ export const ScreenFour = () => {
         <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles2}/>
         <div style={{boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)'}}>
           <Typography variant='body2' component='p' align='center' style={{padding: 64}}>подробнее 
-            ознакомиться с необычными свойствами светильника вы можете<br />на этой странице ниже
+            ознакомиться с необычными свойствами светильника Вы можете<br />на этой странице ниже
           </Typography>
         </div>
       </div>
@@ -135,7 +135,7 @@ export const ScreenFour = () => {
         <Container>
           <Typography variant="h2" component='h1' gutterBottom>благодаря отсутствию посредников</Typography>
           <Typography variant='body1' component='p'>(поскольку это собственная разработка) и высококачественным комплектующим,&ensp;
-                <Typography variant="body1" component='span' style={{color: '#fff'}}>мы предлагаем</Typography>&ensp;оптимальное
+                <Typography variant="body1" component='span' color='primary'>мы предлагаем</Typography>&ensp;оптимальное
                 сочетание цены и качества!
                 </Typography>
         </Container>
@@ -144,7 +144,7 @@ export const ScreenFour = () => {
       <div className={classes.clipPathBlock2} />
       <div style={{position: 'relative'}}>   
         <div className={classes.dottedLineStyleDarker2} />     
-        <Typography variant='body1' component='p' align='center' style={{padding: 64}}>Таким образом, приобритая наши светильники,
+        <Typography variant='body1' component='p' align='center' style={{padding: 64}}>Таким образом, приобретая наши светильники,
         Вы получаете оригинальную продукцию от компании&ensp;
             <Typography variant="body1" component='span' style={{color: '#241E4C'}}>Fulogy</Typography>&ensp;
         </Typography>

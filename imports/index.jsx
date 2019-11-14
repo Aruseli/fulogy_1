@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { Switch, Route } from 'react-router';
 
@@ -18,6 +18,7 @@ import {ScreenEight} from './components/screen-eight';
 import {ScreenNine} from './components/screen-nine';
 import {Footer} from './components/footer';
 
+export const TitleValue = React.createContext();
 
 export const Index = () => {
   return (
@@ -37,6 +38,7 @@ export const Index = () => {
 }
 
 export const App = () => {
+  const [title, setTitle] = useState();
 
   return (
     <AnaliticsProvider
@@ -45,9 +47,11 @@ export const App = () => {
       yandexMetrika={null}
     >
       <ThemeProvider theme={theme}>
-        <Switch>
-          <Route path='/' component={Index} />
-        </Switch>
+        <TitleValue.Provider>
+          <Switch>
+            <Route path='/' component={Index} />
+          </Switch>
+        </TitleValue.Provider>
       </ThemeProvider>
     </AnaliticsProvider>
   )

@@ -62,7 +62,7 @@ export const Footer = () => {
                 <a href='tel: 8(800) 505 65 33' style={{
                   textDecoration: 'none', 
                   color: '#000',
-                  }}>8(800) 505 65 33
+                  }}>8 800 505-65-33
                 </a>
               </Typography>
             } />
@@ -105,21 +105,39 @@ export const Footer = () => {
           alignItems='center'
         >
           <Grid item xs={4}>
-            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+            <Button 
+              variant='text' 
+              fullWidth 
+              disableRipple 
+              target='_blank'
+              href='https://plus.google.com/118436112847149375359'
+              classes={{label: classes.labelButtonStyle}}>
               <Typography variant='body1' component='h2' align='center'>
                 Google+
               </Typography>
             </Button>
           </Grid>
           <Grid item xs={4}>
-            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+            <Button 
+              variant='text' 
+              fullWidth 
+              disableRipple 
+              target='_blank'
+              href='https://www.facebook.com/fulogy/'
+              classes={{label: classes.labelButtonStyle}}>
               <Typography variant='body1' component='h2' align='center'>
                 Facebook
               </Typography>
             </Button>
           </Grid>
           <Grid item xs={4}>
-            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+            <Button 
+              variant='text' 
+              fullWidth 
+              disableRipple 
+              target='_blank'
+              href='https://www.instagram.com/fulogy.ru/'
+              classes={{label: classes.labelButtonStyle}}>
               <Typography variant='body1' component='h2' align='center'>
                 Instagram
               </Typography>
@@ -133,21 +151,39 @@ export const Footer = () => {
           style={{marginTop: 64}}
         >
           <Grid item xs={4}>
-            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+            <Button 
+              variant='text' 
+              fullWidth 
+              disableRipple 
+              target='_blank'
+              href='https://vk.com/public124817525'
+              classes={{label: classes.labelButtonStyle}}>
               <Typography variant='body1' component='h2' align='center'>
                 Vk
               </Typography>
             </Button>
           </Grid>
           <Grid item xs={4}>
-            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+            <Button 
+              variant='text' 
+              fullWidth 
+              disableRipple 
+              target='_blank'
+              href='https://www.youtube.com/channel/UC3VvssJI1Lw1Uf--3P6I2Nw'
+              classes={{label: classes.labelButtonStyle}}>
               <Typography variant='body1' component='h2' align='center'>
                 YouTube
               </Typography>
             </Button>
           </Grid>
           <Grid item xs={4}>
-            <Button variant='text' fullWidth disableRipple classes={{label: classes.labelButtonStyle}}>
+            <Button 
+              variant='text' 
+              fullWidth 
+              disableRipple 
+              target='_blank'
+              href='http://feeds.feedburner.com/SmartDimmer'
+              classes={{label: classes.labelButtonStyle}}>
               <Typography variant='body1' component='h2' align='center'>
                 Feet
               </Typography>

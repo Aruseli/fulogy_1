@@ -116,7 +116,7 @@ export const ScreenNine = () => {
         <div className={classes.dottedLineStyleLeft} />
         <div className={classes.dottedLineStyleBottom} />
         <Typography variant='body1' component='p' align='center'>Пройдите тест из&ensp;
-          <Typography variant='body2' component='span'>6 вопросов за 3 минуты</Typography>&ensp;
+          <Typography variant='body2' component='span'>6 вопросов за 2 минуты</Typography>&ensp;
           и получите&ensp;
           <Typography variant='h5' component='span'>скидку 5%</Typography>&ensp;на оригинальный светильник от компании&ensp;
           <Typography variant='body2' component='span' style={{color: '#252049'}}>Fulogy</Typography>&ensp;

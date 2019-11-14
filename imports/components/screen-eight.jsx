@@ -119,7 +119,7 @@ export const ScreenEight = () => {
             </ListItem>
           </List>
           <Typography variant='body1' component='p'>позволяет рассеивать тепло,
-            что делает возможным использование мощних ярких лент без боязни перегрева.
+            что делает возможным использование мощных ярких лент без боязни перегрева.
           </Typography>
         </Container>
       </div> 
@@ -140,8 +140,8 @@ export const ScreenEight = () => {
             </ListItem>
           </List>
           <Typography variant='body1' component='div'>
-            <Typography variant='h5' component='h3'>светодиодны высокой светопередачи,</Typography>
-            что делает свет приближенным к естественному солнечному цвету, и Вы видите предметы привычно, 
+            <Typography variant='h5' component='h3'>светодиоды высокой цветопередачи,</Typography>
+            что делает свет приближенным к естественному солнечному свету, и Вы видите предметы привычно, 
             как и при дневном свете.
           </Typography>
           <Typography variant='body1' component='p'>Рабочая зона столешницы при этом освещается равномерно
@@ -160,7 +160,7 @@ export const ScreenEight = () => {
               </ListItemIcon>
               <ListItemText 
                 primary={
-                <Typography variant='body1' component='p'>Для Вашего удобства, светильник</Typography>
+                <Typography variant='body1' component='p'>Для Вашего удобства светильник</Typography>
               } 
               />
             </ListItem>
@@ -210,7 +210,7 @@ export const ScreenEight = () => {
               </ListItemIcon>
               <ListItemText 
                 primary={
-                <Typography variant='h5' component='h3'>светодиодная подстветка</Typography>
+                <Typography variant='h5' component='h3'>светодиодная подсветка</Typography>
               } 
               />
             </ListItem>
