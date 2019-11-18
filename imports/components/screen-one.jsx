@@ -37,7 +37,8 @@ export const ScreenOne = () => {
   const handlerEvent = () => setDialog({ 
     open: !open, 
     title: <Typography variant='h3' component="h1" align='center'>чтобы заказать звонок</Typography>,
-    bottom: <>Заказать звонок</>
+    bottom: <>Заказать звонок</>,
+    onThanksHandler: (trigger) => trigger('Расчет1'),
   });
 
   return (

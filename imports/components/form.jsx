@@ -37,15 +37,19 @@ const useStyle = makeStyles(theme => ({
 export const Form = ({}) => {
   const classes = useStyle();
   const { trigger } = useContext(AnaliticsContext);
-  const {setDialog, title, open, bottom, thanks} = useContext(DialogContext);
+  const {setDialog, title, open, bottom, thanks, onThanksHandler} = useContext(DialogContext);
   
   const onClick = () => {
-    setDialog({open: !open});
+    setDialog({
+      open: !open,
+      onThanksHandler: null
+    });
   }
 
   const onThanks = () => {
     setDialog({thanks: !thanks});
     trigger('thanks');
+    if(onThanksHandler) onThanksHandler(trigger);
   }
 
   return(
