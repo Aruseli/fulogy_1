@@ -4,7 +4,7 @@ import red from '@material-ui/core/colors/red';
 export const fontFamily = '"MuseoSansCyrl"';
 
 // Create a theme instance.
-export const theme = createMuiTheme({
+export const mobile = createMuiTheme({
   palette: {
     primary: {
       main: '#F37E78',
@@ -25,7 +25,7 @@ export const theme = createMuiTheme({
       textTransform: 'uppercase',
       letterSpacing: '0.07em',
       fontWeight: 700,
-      fontSize: '4rem',
+      fontSize: 24,
       lineHeight: 1.3,
       fontFamily,
     },
@@ -33,7 +33,7 @@ export const theme = createMuiTheme({
       textTransform: 'uppercase',
       letterSpacing: '0.05em',
       fontWeight: 700,
-      fontSize: '3rem',
+      fontSize: 18,
       lineHeight: 1.3,
       fontFamily,
     },
@@ -41,7 +41,7 @@ export const theme = createMuiTheme({
       textTransform: 'uppercase',
       lineHeight: 1.4,
       fontFamily,
-      fontSize: '2.8rem',
+      fontSize: 16,
       fontWeight: 500,
     },
     h4: {
@@ -49,13 +49,13 @@ export const theme = createMuiTheme({
       textTransform: 'uppercase',
       fontFamily,
       lineHeight: 1.4,
-      fontSize: '2.9rem',
+      fontSize: 18,
     },
     h5: {
       textTransform: 'uppercase',
       letterSpacing: '0.01em',
       fontWeight: 700,
-      fontSize: '3rem',
+      fontSize: 16,
       lineHeight: 1.3,
       fontFamily,
       color: '#F37E78' 
@@ -63,19 +63,19 @@ export const theme = createMuiTheme({
     subtitle1: {
       lineHeight: 1.4,
       fontFamily,
-      fontSize: '2.9rem',
+      fontSize: 16,
       fontWeight: 300
     },
     body1: {
       lineHeight: 1.4,
       fontFamily,
-      fontSize: '2.9rem',
+      fontSize: 16,
       fontWeight: 300
     },
     body2: {
       lineHeight: 1.4,
       fontFamily,
-      fontSize: '2.9rem',
+      fontSize: 16,
       fontWeight: 500
     },
     button: {
@@ -117,14 +117,14 @@ export const theme = createMuiTheme({
         }
       },
       sizeSmall: {
-        padding: '15px 25px',
+        // padding: '15px 25px',
         textTransform: 'none',
-        fontSize: '2.5rem'
+        fontSize: 18
       },
       sizeLarge: {
-        padding: '25px 75px',
+        // padding: '25px 75px',
         textTransform: 'none',
-        fontSize: '2.5rem'
+        fontSize: 18
       }
     },
     MuiPaper: {
@@ -137,7 +137,7 @@ export const theme = createMuiTheme({
     },
     MuiTypography: {
       gutterBottom: {
-        marginBottom: '3.5rem'
+        marginBottom: '1.5rem'
       }
     },
     MuiTouchRipple: {
@@ -147,7 +147,7 @@ export const theme = createMuiTheme({
     },
     MuiInput: {
       input: {
-        fontSize: '3rem',
+        fontSize: 18,
         marginTop: 48
       }
     }

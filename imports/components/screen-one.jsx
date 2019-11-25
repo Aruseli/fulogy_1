@@ -16,18 +16,27 @@ const useStyle = makeStyles(theme => ({
   },
   clipPathBlock: {
     clipPath: 'polygon(85% 0, 100% 5%, 100% 100%, 0 100%, 0 5%, 15% 0)',
-    backgroundPosition: '30%',
+    backgroundPosition: '35%',
     backgroundImage: "url('/photo.jpg'), linear-gradient(#00000003, #0000009e)",
     backgroundBlendMode: 'saturation',
-    backgroundSize: '1800px 1260px',
+    backgroundSize: 'auto 135%',
     width: '100%',
     height: '55vh',
     position: 'relative'
   },
   clipPathText: {
-    paddingBottom: 145,
-    paddingLeft: 50,
+    paddingBottom: 64,
+    paddingLeft: 16,
     color: '#fff',
+  },
+  divHeaderPaddingsMargins: {
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: '15%',
+      paddingRight: '15%',
+      marginBottom: 64
+    },
+    marginTop: 16, 
+    marginBottom: 32
   }
 }))
 
@@ -47,30 +56,30 @@ export const ScreenOne = () => {
 
   return (
     <>
-      <div style={{marginTop: 32, marginBottom: '3.8rem'}}>
+      <div className={classes.divHeaderPaddingsMargins}>
         <Grid
           container
           justify='space-between'
           alignItems='center'
           style={{overflow: 'hidden'}}
         >
-          <Grid item xs={6}>
-            <img src='/logo.png' alt="логотип Fulogy" style={{width: 300}} />
+          <Grid item>
+            <img src='/logo.png' alt="логотип Fulogy" style={{width: 120}} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs>
             <Grid
               container
               justify='flex-end'
               alignItems='center'
               spacing={2}  
             >
-              <Grid item style={{paddingRight: 75}}>
+              <Grid item style={{paddingRight: 25}}>
                 <a href='tel: 8(800) 505 65 33' style={{
                   textDecoration: 'none', 
                   color: '#000', 
-                  fontSize: 34}}>8 800 505-65-33</a>
+                  fontSize: 18}}>8 800 505-65-33</a>
               </Grid>
-              <Grid item style={{paddingRight: 35}}>
+              <Grid item style={{paddingRight: 16}}>
                 <Button variant="outlined" size="small" onClick={handlerEvent('callback0', 'thanksCallback0', {
                   title: <Typography variant='h3' component="h1" align='center'>чтобы заказать звонок</Typography>,
                   bottom: <>Заказать звонок</>,
@@ -85,7 +94,7 @@ export const ScreenOne = () => {
         display='column'
         justify='center'
         alignItems='center'
-        style={{marginBottom: 32}}
+        style={{marginBottom: 16}}
       >
         <Grid item xs={8}>
           <Typography variant="h1" component="h1" color='primary' align='center'>Светодиодный светильник</Typography>
@@ -102,7 +111,7 @@ export const ScreenOne = () => {
       </Grid>
       <Grid container justify='center' alignItems='center' style={{
           position: 'relative',
-          bottom: 60,
+          bottom: 25,
           width: '100%'
         }}>
         <Grid item>

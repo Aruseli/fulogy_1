@@ -15,15 +15,15 @@ import { Context as AnaliticsContext } from '../package/analitics';
 const useStyle = makeStyles(theme => ({
   redLineStyle: {
     position: 'absolute',
-    top: 33,
+    top: 12,
     left: 0,
     backgroundColor: '#f37e78',
-    width: 80,
-    height: 7
+    width: 32,
+    height: 3
   },
   headerStyle: {
     position: 'relative', 
-    paddingLeft: 90
+    paddingLeft: 48
   },
   clipPathBlock: {
     clipPath: 'polygon(100% 0, 100% 100%, 85% 95%, 15% 95%, 0 100%, 0 0)',
@@ -36,25 +36,25 @@ const useStyle = makeStyles(theme => ({
   },
   dottedLineStyle: {
     position: 'absolute',
-    right: 75,
+    right: 24,
     top: 0,
     height: '100%',
     width: 1,
-    backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
+    backgroundSize: '1px 35px',
+    backgroundImage: 'linear-gradient(#d8d8d8 35%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
   circleNumberStyle: {
-    top: 105,
-    right: 39,
-    width: 80,
-    height: 80,
+    top: 32,
+    right: 10,
+    width: 30,
+    height: 30,
     textAlign: 'center',
     position: 'absolute',
     background: '#fff',
-    fontSize: '2.9rem',
-    padding: 15,
+    fontSize: 16,
+    padding: 7,
     boxSizing: 'border-box',
     color: '#d8d8d8',
   },
@@ -62,7 +62,7 @@ const useStyle = makeStyles(theme => ({
     borderTop: `3px solid ${theme.palette.primary.main}`,
     borderBottom: `3px solid ${theme.palette.primary.main}`,
     boxSizing: 'border-box',
-    padding: 48
+    padding: 16
   },
 }))
 
@@ -82,7 +82,7 @@ export const ScreenThree = () => {
   
   return(
     <>
-      <div style={{position: 'relative', paddingTop: 240, paddingRight: 96, paddingBottom: 48}}>
+      <div style={{position: 'relative', paddingTop: 96, paddingRight: 16, paddingBottom: 48}}>
         <div className={classes.dottedLineStyle} />
         <Paper elevation={4} className={classes.circleNumberStyle}>3</Paper>
         <div className={classes.headerStyle}>
@@ -92,7 +92,7 @@ export const ScreenThree = () => {
         </div>
         <Container>
           <Typography variant='subtitle1' component='p'>Светильник дает&ensp;
-            <Typography variant="body1" component='span' color='primary'>яркий,</Typography>&ensp;
+            <Typography variant="body1" component='span' color='primary'>яркий,</Typography>&thinsp;
             качественный и, главное, естественный свет "БЕЗ ТОЧЕК", не перегревается и потребляет 
             очень мало электроэнергии.  
           </Typography>
@@ -101,7 +101,7 @@ export const ScreenThree = () => {
       <div className={classes.clipPathBlock} />
       <div style={{position: 'relative'}}>
         <div className={classes.dottedLineStyle} />
-        <Typography variant="body1" component='p' align='center' style={{padding: 64}}>
+        <Typography variant="body1" component='p' align='center' style={{padding: 32}}>
         Кроме этого, он выглядит очень эстетично и просто красиво!</Typography>
       </div> 
       <div className={classes.redBordersBlockStyle}>
@@ -111,13 +111,13 @@ export const ScreenThree = () => {
           без видимых стыков (соединений).
         </Typography>
       </div>
-      <div style={{position: 'relative', padding: '0 48px'}}>
+      <div style={{position: 'relative'}}>
         <div className={classes.dottedLineStyle} />
-        <Typography variant="h4" component='h2' align='center' style={{paddingTop: 64}}>
+       <Typography variant="h4" component='h2' align='center' style={{paddingTop: 48, paddingLeft: 16, paddingRight: 16}}>
         чтобы задать вопрос или оставить заявку</Typography>
-        <Typography variant="body1" component='p' align='center' style={{paddingBottom: 64}}>
+        <Typography variant="body1" component='p' align='center' style={{paddingBottom: 32}}>
         нажмите на кнопку ниже:</Typography>
-        <Grid display='column' container justify='center' alignItems='center' spacing={10}>
+        <Grid display='column' container justify='center' alignItems='center' spacing={4}>
           <Grid item xs={9}>
             <Button fullWidth variant="contained" color="primary" size="large" onClick={handlerEvent('request1', 'thanksRequest1', {
               title: <Typography variant='h3' component="h1" align='center'>чтобы оставить заявку</Typography>,

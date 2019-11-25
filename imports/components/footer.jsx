@@ -17,12 +17,18 @@ const useStyle = makeStyles(theme => ({
   nudeBlockStyle: {
     backgroundColor: theme.palette.background.default,
     boxSizing: 'border-box',
-    padding: '96px 32px',
-    marginTop: 112,
+    padding: '32px 16px',
+    marginTop: 48,
   },
   labelButtonStyle: {
     textTransform: 'none',
     textAlign: 'center'
+  },
+  dotStyle: {
+    width: 10
+  },
+  minWidth: {
+    minWidth: 15
   }
 }))
 
@@ -34,8 +40,8 @@ export const Footer = () => {
       <div className={classes.nudeBlockStyle}>
         <List>
           <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord style={{color:'#F37E78'}} />
+            <ListItemIcon classes={{root: classes.minWidth}}>
+              <FiberManualRecord className={classes.dotStyle} color='primary'/>
             </ListItemIcon>
             <ListItemText primary={
               <Typography variant='body1' component='p'>
@@ -44,8 +50,8 @@ export const Footer = () => {
             } />
           </ListItem>
           <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord style={{color:'#F37E78'}} />
+            <ListItemIcon classes={{root: classes.minWidth}}>
+              <FiberManualRecord className={classes.dotStyle} color='primary'/>
             </ListItemIcon>
             <ListItemText primary={
               <Typography variant='body1' component='p'>
@@ -54,8 +60,8 @@ export const Footer = () => {
             } />
           </ListItem>
           <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord style={{color:'#F37E78'}} />
+            <ListItemIcon classes={{root: classes.minWidth}}>
+              <FiberManualRecord className={classes.dotStyle} color='primary'/>
             </ListItemIcon>
             <ListItemText primary={
               <Typography variant='body1' component='p'>
@@ -68,8 +74,8 @@ export const Footer = () => {
             } />
           </ListItem>
           <ListItem>
-            <ListItemIcon>
-              <FiberManualRecord style={{color:'#F37E78'}} />
+            <ListItemIcon classes={{root: classes.minWidth}}>
+              <FiberManualRecord className={classes.dotStyle} color='primary'/>
             </ListItemIcon>
             <ListItemText primary={
               <Typography variant='body1' component='p'>
@@ -98,7 +104,7 @@ export const Footer = () => {
           </Grid>
         </Grid>
       </div>
-      <div style={{paddingTop: 112, paddingBottom: 112}}>
+      <div style={{paddingTop: 32, paddingBottom: 64}}>
         <Grid
           container
           justify='center'

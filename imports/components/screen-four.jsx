@@ -18,42 +18,42 @@ const useStyle = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     width: '100%',
-    height: 200,
+    height: 75,
     position: 'absolute',
-    top: 123,
-    left: -67,
+    top: 44,
+    left: -26,
     zIndex: -1
   },
   dottedLineStyle: {
     position: 'absolute',
-    right: 75,
+    right: 24,
     top: 0,
     height: '100%',
     width: 1,
-    backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
+    backgroundSize: '1px 35px',
+    backgroundImage: 'linear-gradient(#d8d8d8 35%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
   dottedLineStyleDarker: {
     position: 'absolute',
-    right: 75,
+    right: 24,
     top: 0,
     height: '100%',
     width: 1,
-    backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
+    backgroundSize: '1px 35px',
+    backgroundImage: 'linear-gradient(#d8d8d8 35%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
   dottedLineStyleDarker2: {
     position: 'absolute',
-    right: 75,
+    right: 24,
     top: 0,
     height: '100%',
     width: 1,
-    backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%), linear-gradient(#d8d8d8 33%, rgba(255,255,255,0) 0%)',
+    backgroundSize: '1px 35px',
+    backgroundImage: 'linear-gradient(#d8d8d8 35%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
@@ -79,24 +79,24 @@ const useStyle = makeStyles(theme => ({
   },
   arrowStyles1: {
     position: 'absolute',
-    width: 100,
-    right: 342,
+    width: 35,
+    right: 112,
     transform: 'rotate(15deg)',
-    bottom: 342,
+    bottom: 150,
   },
   arrowStyles2: {
     position: 'absolute',
-    width: 121,
-    left: 35,
+    width: 45,
+    left: 8,
     transform: 'rotate(-1deg)',
     bottom: 30,
   },
   arrowStyles3: {
     position: 'absolute',
-    width: 121,
-    right: 13,
+    width: 45,
+    right: 0,
     transform: 'rotate(-1deg)',
-    top: 335,
+    top: 144,
   }
 }))
 
@@ -117,7 +117,7 @@ export const ScreenFour = () => {
   return(
     <>
       <div style={{position: 'relative'}}>
-        <div style={{position: 'relative', paddingTop: 240, paddingRight: 96, paddingBottom: 48}}>
+        <div style={{position: 'relative', paddingTop: 90, paddingRight: 16, paddingBottom: 16}}>
           <div className={classes.dottedLineStyle} />
           <div className={classes.handBlockStyle} />
           <Container>
@@ -131,12 +131,12 @@ export const ScreenFour = () => {
         <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles1}/>
         <img src='/icon/up-broken-line-arrow-right.svg' alt='стрелочка' className={classes.arrowStyles2}/>
         <div style={{boxShadow: '0 5px 10px 0 rgba(0, 0, 0, .1)'}}>
-          <Typography variant='body2' component='p' align='center' style={{padding: 64}}>подробнее 
+          <Typography variant='body2' component='p' align='center' style={{padding: '32px 16px'}}>подробнее 
             ознакомиться с необычными свойствами светильника Вы можете<br />на этой странице ниже
           </Typography>
         </div>
       </div>
-      <div style={{position: 'relative', paddingTop: 128, paddingRight: 96, paddingBottom: 48}}>
+      <div style={{position: 'relative', paddingTop: 80, paddingRight: 16, paddingBottom: 16}}>
         <div className={classes.dottedLineStyleDarker} />
         <Container>
           <Typography variant="h2" component='h1' gutterBottom>благодаря отсутствию посредников</Typography>
@@ -148,9 +148,9 @@ export const ScreenFour = () => {
         <img src='/icon/up-broken-line-arrow-left.svg' alt='стрелочка' className={classes.arrowStyles3}/>
       </div>
       <div className={classes.clipPathBlock2} />
-      <div style={{position: 'relative'}}>   
+      <div style={{position: 'relative', paddingBottom: 16}}>   
         <div className={classes.dottedLineStyleDarker2} />     
-        <Typography variant='body1' component='p' align='center' style={{padding: 64}}>Таким образом, приобретая наши светильники,
+        <Typography variant='body1' component='p' align='center' style={{padding: 32}}>Таким образом, приобретая наши светильники,
         Вы получаете оригинальную продукцию от компании&ensp;
             <Typography variant="body1" component='span' style={{color: '#241E4C'}}>Fulogy</Typography>&ensp;
         </Typography>

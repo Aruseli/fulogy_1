@@ -64,7 +64,7 @@ export const Form = ({}) => {
         { thanks 
         ? <Thanks />
         : <>
-          <DialogContent style={{padding: '112px 112px 32px 112px', boxSizing: 'border-box'}}>
+          <DialogContent style={{padding: '112px 112px 16px 112px', boxSizing: 'border-box'}}>
             {title}
             <Typography variant='body1' component="p" align='center' gutterBottom>Введите свое имя и телефон</Typography>
             <div style={{paddingTop: 48}}>

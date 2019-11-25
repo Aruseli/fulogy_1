@@ -18,37 +18,37 @@ import {Slider} from './slider';
 const useStyle = makeStyles(theme => ({
   redLineStyle: {
     position: 'absolute',
-    top: 35,
+    top: 12,
     left: 0,
     backgroundColor: '#f37e78',
-    width: 80,
-    height: 7
+    width: 32,
+    height: 3
   },
   headerStyle: {
     position: 'relative', 
-    paddingLeft: 90
+    paddingLeft: 48
   },
   dottedLineStyle: {
     position: 'absolute',
-    right: 75,
+    right: 24,
     top: 0,
     height: '100%',
     width: 1,
-    backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#f37e78 33%, rgba(255,255,255,0) 0%), linear-gradient(#f37e78 33%, rgba(255,255,255,0) 0%)',
+    backgroundSize: '1px 35px',
+    backgroundImage: 'linear-gradient(#f37e78 35%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
   circleNumberStyle: {
-    top: 105,
-    right: 39,
-    width: 80,
-    height: 80,
+    top: 32,
+    right: 10,
+    width: 30,
+    height: 30,
     textAlign: 'center',
     position: 'absolute',
     background: '#f3b3b3',
-    fontSize: '2.9rem',
-    padding: 15,
+    fontSize: 16,
+    padding: 7,
     boxSizing: 'border-box',
     color: '#fff',
   },
@@ -72,6 +72,12 @@ const useStyle = makeStyles(theme => ({
     position: 'relative',
     zIndex: 2
   },
+  dotStyle: {
+    width: 10
+  },
+  minWidth: {
+    minWidth: 15
+  }
 }))
 
 const items = [
@@ -97,7 +103,7 @@ export const ScreenEight = () => {
   
   return(
     <>
-      <div style={{position: 'relative', paddingTop: 240, paddingRight: 96, paddingBottom: 48}}>
+      <div style={{position: 'relative', paddingTop: 96, paddingRight: 32, paddingBottom: 16}}>
         <div className={classes.dottedLineStyle} />
         <Paper elevation={4} className={classes.circleNumberStyle}>6</Paper>
         <div className={classes.headerStyle}>
@@ -108,8 +114,8 @@ export const ScreenEight = () => {
         <Container>
           <List>
             <ListItem>
-              <ListItemIcon>
-                <FiberManualRecord color='primary'/>
+              <ListItemIcon classes={{root: classes.minWidth}}>
+                <FiberManualRecord className={classes.dotStyle} color='primary'/>
               </ListItemIcon>
               <ListItemText 
                 primary={
@@ -124,13 +130,13 @@ export const ScreenEight = () => {
         </Container>
       </div> 
       <div className={classes.clipPathBlock1} />
-      <div style={{position: 'relative', paddingTop: 96, paddingRight: 96, paddingBottom: 96}}>
+      <div style={{position: 'relative', paddingTop: 32, paddingRight: 32, paddingBottom: 32}}>
         <div className={classes.dottedLineStyle} />
         <Container>
           <List>
             <ListItem>
-              <ListItemIcon>
-                <FiberManualRecord color='primary'/>
+              <ListItemIcon classes={{root: classes.minWidth}}>
+                <FiberManualRecord className={classes.dotStyle} color='primary'/>
               </ListItemIcon>
               <ListItemText 
                 primary={
@@ -139,7 +145,7 @@ export const ScreenEight = () => {
               />
             </ListItem>
           </List>
-          <Typography variant='body1' component='div'>
+          <Typography variant='body1' component='p'>
             <Typography variant='h5' component='h3'>светодиоды высокой цветопередачи,</Typography>
             что делает свет приближенным к естественному солнечному свету, и Вы видите предметы привычно, 
             как и при дневном свете.
@@ -150,13 +156,13 @@ export const ScreenEight = () => {
         </Container>
       </div>
       <Slider items={items} />
-      <div style={{position: 'relative', paddingTop: 48, paddingRight: 32, paddingBottom: 96}}>
+      <div style={{position: 'relative', paddingTop: 24, paddingRight: 16, paddingBottom: 16}}>
         <div className={classes.dottedLineStyle} />
         <Container>
           <List>
             <ListItem>
-              <ListItemIcon>
-                <FiberManualRecord color='primary'/>
+              <ListItemIcon classes={{root: classes.minWidth}}>
+                <FiberManualRecord className={classes.dotStyle} color='primary'/>
               </ListItemIcon>
               <ListItemText 
                 primary={
@@ -181,11 +187,11 @@ export const ScreenEight = () => {
         zIndex: 222,
         backgroundColor: '#fff'
       }}>
-        <div style={{padding: '64px 112px 96px 32px'}}>
+        <div style={{padding: '32px 32px 32px 16px'}}>
           <List disablePadding>
             <ListItem>
-              <ListItemIcon>
-                <FiberManualRecord color='primary'/>
+              <ListItemIcon classes={{root: classes.minWidth}}>
+                <FiberManualRecord className={classes.dotStyle} color='primary'/>
               </ListItemIcon>
               <ListItemText 
                 primary={
@@ -200,13 +206,13 @@ export const ScreenEight = () => {
           </Typography>
         </div>
       </div>
-      <div style={{position: 'relative', paddingTop: 80, paddingRight: 32}}>
+      <div style={{position: 'relative', paddingTop: 48, paddingRight: 16}}>
         <div className={classes.dottedLineStyle} />
         <Container>
           <List disablePadding>
             <ListItem>
-              <ListItemIcon>
-                <FiberManualRecord color='primary'/>
+              <ListItemIcon classes={{root: classes.minWidth}}>
+                <FiberManualRecord className={classes.dotStyle} color='primary'/>
               </ListItemIcon>
               <ListItemText 
                 primary={

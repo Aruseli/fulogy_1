@@ -5,42 +5,42 @@ import {makeStyles, Typography, Container, Paper} from '@material-ui/core';
 const useStyle = makeStyles(theme => ({
   redLineStyle: {
     position: 'absolute',
-    top: 35,
+    top: 12,
     left: 0,
     backgroundColor: '#f37e78',
-    width: 80,
-    height: 7
+    width: 32,
+    height: 3
   },
   headerStyle: {
     position: 'relative', 
-    paddingLeft: 90
+    paddingLeft: 48
   },
   nudeBlockStyle: {
     backgroundColor: theme.palette.background.default,
     boxSizing: 'border-box',
-    padding: '32px 100px 32px 32px'
+    padding: 16
   },
   dottedLineStyle: {
     position: 'absolute',
-    right: 75,
+    right: 24,
     top: 0,
     height: '100%',
     width: 1,
-    backgroundSize: '1px 66px',
-    backgroundImage: 'linear-gradient(#ececec 33%, rgba(255,255,255,0) 0%), linear-gradient(#ececec 33%, rgba(255,255,255,0) 0%)',
+    backgroundSize: '1px 35px',
+    backgroundImage: 'linear-gradient(#ececec 35%, rgba(255,255,255,0) 0%)',
     backgroundRepeat: 'repeat-y',
     backgroundPosition: 'right'
   },
   circleNumberStyle: {
-    top: 105,
-    right: 39,
-    width: 80,
-    height: 80,
+    top: 32,
+    right: 10,
+    width: 30,
+    height: 30,
     textAlign: 'center',
     position: 'absolute',
     background: '#fff',
-    fontSize: '2.9rem',
-    padding: 15,
+    fontSize: 16,
+    padding: 7,
     boxSizing: 'border-box',
     color: '#ececec',
   },
@@ -51,7 +51,7 @@ export const ScreenTwo = () => {
   
   return(
     <>
-      <div style={{position: 'relative', paddingTop: 240, paddingRight: 96, paddingBottom: 48}}>
+      <div style={{position: 'relative', paddingTop: 96, paddingRight: 16, paddingBottom: 48}}>
         <div className={classes.dottedLineStyle} />
         <Paper elevation={4} className={classes.circleNumberStyle}>2</Paper>
         <div className={classes.headerStyle}>
