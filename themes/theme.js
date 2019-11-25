@@ -4,7 +4,7 @@ import red from '@material-ui/core/colors/red';
 export const fontFamily = '"MuseoSansCyrl"';
 
 // Create a theme instance.
-export const mobile = createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#F37E78',

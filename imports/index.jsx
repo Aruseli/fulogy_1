@@ -6,7 +6,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import {
   Typography, 
   useMediaQuery,
-  useTheme
 } from '@material-ui/core';
 
 import { AnaliticsProvider } from './package/analitics';
@@ -65,7 +64,6 @@ export const DialogContextProvider = ({ children }) => {
 };
 
 export const App = () => {
-  const theme = useTheme();
   // const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
   return (

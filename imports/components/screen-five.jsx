@@ -161,7 +161,7 @@ export const ScreenFive = () => {
           <Typography variant="body1" component='span' color='primary'>Вы&nbsp;будете приходить к нам снова</Typography>&ensp;и&nbsp;приведете друзей и знакомых.  
         </Typography>
       </div>
-      <div style={{position: 'relative'}}>
+      <div style={{position: 'relative', overflow: 'hidden'}}>
         <div className={classes.dottedLineStyle} />
        <Typography variant="h4" component='h2' align='center' style={{paddingTop: 48, paddingLeft: 16, paddingRight: 16}}>
         чтобы задать вопрос или оставить заявку</Typography>
