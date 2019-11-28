@@ -187,7 +187,10 @@ export const theme = createMuiTheme({
     MuiInput: {
       input: {
         fontSize: 18,
-        marginTop: 48
+        marginTop: 48,
+        [th.breakpoints.up('md')]: {
+          marginTop: 8,
+        }
       }
     }
   },

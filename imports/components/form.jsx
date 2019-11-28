@@ -8,7 +8,8 @@ import {
   TextField,
   IconButton,
   Typography,
-  Button
+  Button,
+  Hidden
 } from '@material-ui/core';
 
 import Close from '@material-ui/icons/Close';
@@ -28,6 +29,10 @@ const useStyle = makeStyles(theme => ({
     right: theme.spacing(3),
     top: theme.spacing(3),
     color: theme.palette.grey[500],
+    [theme.breakpoints.up('md')]: {
+      right: theme.spacing(1),
+      top: theme.spacing(1),
+    }
   },
   paperDialog: {
     borderRadius: 10
@@ -55,40 +60,77 @@ export const Form = ({}) => {
   return(
     <>
       <Dialog open={open} onClose={onClick} aria-labelledby="form-dialog-title" maxWidth='md' classes={{paper: classes.paperDialog}}>
-        <IconButton
-          aria-label="close"
-          className={classes.closeButton}
-          onClick={onClick}>
-          <Close style={{height: 60, width: 60}} />
-        </IconButton>
-        { thanks 
-        ? <Thanks />
-        : <>
-          <DialogContent style={{padding: '112px 112px 16px 112px', boxSizing: 'border-box'}}>
-            {title}
-            <Typography variant='body1' component="p" align='center' gutterBottom>Введите свое имя и телефон</Typography>
-            <div style={{paddingTop: 48}}>
-              <TextField
-                autoFocus
-                id="name"
-                label="Имя"
-                type="text"
-                fullWidth
-                margin="normal"
-              />
-              <TextField
-                id="phone"
-                label="Телефон"
-                type="phone"
-                fullWidth
-                style={{marginTop: 60}}
-              />
-            </div>
-          </DialogContent>
-          <DialogActions style={{padding: 112}}>
-            <Button fullWidth variant="contained" color="primary" size="large" onClick={onThanks}>{bottom}</Button>
-          </DialogActions>
-        </>}
+        <Hidden implementation='css' only={['md', 'lg', 'xl']}>
+          <IconButton
+            aria-label="close"
+            className={classes.closeButton}
+            onClick={onClick}>
+            <Close style={{height: 60, width: 60}} />
+          </IconButton>
+          { thanks 
+          ? <Thanks />
+          : <>
+            <DialogContent style={{padding: '112px 112px 16px 112px', boxSizing: 'border-box'}}>
+              {title}
+              <Typography variant='body1' component="p" align='center' gutterBottom>Введите свое имя и телефон</Typography>
+              <div style={{paddingTop: 48}}>
+                <TextField
+                  autoFocus
+                  id="name"
+                  label="Имя"
+                  type="text"
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  id="phone"
+                  label="Телефон"
+                  type="phone"
+                  fullWidth
+                  style={{marginTop: 60}}
+                />
+              </div>
+            </DialogContent>
+            <DialogActions style={{padding: 112}}>
+              <Button fullWidth variant="contained" color="primary" size="large" onClick={onThanks}>{bottom}</Button>
+            </DialogActions>
+          </>}
+        </Hidden>
+        <Hidden implementation='css' only={['sm', 'xs']}>
+          <IconButton
+            aria-label="close"
+            className={classes.closeButton}
+            onClick={onClick}>
+            <Close style={{height: 36, width: 36}} />
+          </IconButton>
+          { thanks 
+          ? <Thanks />
+          : <>
+            <DialogContent style={{padding: '64px 32px', boxSizing: 'border-box'}}>
+              {title}
+              <Typography variant='body1' component="p" align='center' gutterBottom>Введите свое имя и телефон</Typography>
+              <div style={{paddingTop: 48}}>
+                <TextField
+                  autoFocus
+                  id="name"
+                  label="Имя"
+                  type="text"
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  id="phone"
+                  label="Телефон"
+                  type="phone"
+                  fullWidth
+                />
+              </div>
+            </DialogContent>
+            <DialogActions style={{padding: 48}}>
+              <Button fullWidth variant="contained" color="primary" size="large" onClick={onThanks}>{bottom}</Button>
+            </DialogActions>
+          </>}
+        </Hidden>
       </Dialog>
     </>
   )
