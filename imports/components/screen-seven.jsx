@@ -151,6 +151,10 @@ const useStyle = makeStyles(theme => ({
     backgroundRepeat: 'repeat-x',
     backgroundPosition: 'top'
   },
+  iconStyles: {
+    width: 25,
+    paddingRight: 15
+  }    
 }))
 
 export const ScreenSeven = () => {

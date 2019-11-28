@@ -169,6 +169,10 @@ const useStyle = makeStyles(theme => ({
     transform: 'rotate(0deg)',
     top: 330,
   },
+  iconStyles: {
+    width: 25,
+    paddingRight: 15
+  },
 }))
 
 export const ScreenFive = () => {
