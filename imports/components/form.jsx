@@ -11,7 +11,7 @@ import {
   Button
 } from '@material-ui/core';
 
-import {Close} from '@material-ui/icons';
+import Close from '@material-ui/icons/Close';
 import {DialogContext} from '../index';
 
 import {Thanks} from './thanks';

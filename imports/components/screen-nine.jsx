@@ -5,7 +5,8 @@ import {
   Typography, 
   Paper, 
   Button,
-  Grid
+  Grid,
+  Hidden
 } from '@material-ui/core';
 import { Context as AnaliticsContext } from '../package/analitics';
 
@@ -107,37 +108,59 @@ export const ScreenNine = () => {
   
   return(
     <>
-      <div style={{position: 'relative', paddingTop: 96, paddingRight: 32, paddingBottom: 32}}>
-        <div className={classes.dottedLineStyle} />
-        <Paper elevation={4} className={classes.circleNumberStyle}>7</Paper>
-        <div className={classes.headerStyle}>
-          <Typography variant="h1" component='h1' align='center'>хотите узнать</Typography>
-          <Typography variant="h2" component='h1' gutterBottom>какая подсветка подойдет вашей кухне?</Typography>
-          <div className={classes.redLineStyle} />
+      <Hidden implementation='css' only={['md', 'lg', 'xl']}>
+        <div style={{position: 'relative', paddingTop: 96, paddingRight: 32, paddingBottom: 32}}>
+          <div className={classes.dottedLineStyle} />
+          <Paper elevation={4} className={classes.circleNumberStyle}>7</Paper>
+          <div className={classes.headerStyle}>
+            <Typography variant="h1" component='h1' align='center'>хотите узнать</Typography>
+            <Typography variant="h2" component='h1' gutterBottom>какая подсветка подойдет вашей кухне?</Typography>
+            <div className={classes.redLineStyle} />
+          </div>
+        </div> 
+        <div style={{position: 'relative', padding: 48}}>
+          <div className={classes.dottedLineStyleTop} />
+          <div className={classes.dottedLineStyleRight} />
+          <div className={classes.dottedLineStyleLeft} />
+          <div className={classes.dottedLineStyleBottom} />
+          <Typography variant='body1' component='p' align='center'>Пройдите тест из&ensp;
+            <Typography variant='body2' component='span'>6 вопросов за 2 минуты</Typography>&ensp;
+            и получите&ensp;
+            <Typography variant='h5' component='span'>скидку 20%</Typography>&ensp;на оригинальный светильник от компании&ensp;
+            <Typography variant='body2' component='span' style={{color: '#252049'}}>Fulogy</Typography>&ensp;
+          </Typography>
         </div>
-      </div> 
-      <div style={{position: 'relative', padding: 48}}>
-        <div className={classes.dottedLineStyleTop} />
-        <div className={classes.dottedLineStyleRight} />
-        <div className={classes.dottedLineStyleLeft} />
-        <div className={classes.dottedLineStyleBottom} />
-        <Typography variant='body1' component='p' align='center'>Пройдите тест из&ensp;
-          <Typography variant='body2' component='span'>6 вопросов за 2 минуты</Typography>&ensp;
-          и получите&ensp;
-          <Typography variant='h5' component='span'>скидку 20%</Typography>&ensp;на оригинальный светильник от компании&ensp;
-          <Typography variant='body2' component='span' style={{color: '#252049'}}>Fulogy</Typography>&ensp;
-        </Typography>
-      </div>
-    <div style={{height: 48}} />
-    <Grid 
-      container
-      justify='center'
-      alignItems='center'
-    >
-      <Grid item xs={9}>
-        <Button fullWidth variant="contained" color="primary" size="large" href='https://constructor.fulogy.com/quiz' target='_blank' onClick={onClick}>Пройти тест</Button>
+      <div style={{height: 48}} />
+      <Grid 
+        container
+        justify='center'
+        alignItems='center'
+      >
+        <Grid item xs={9}>
+          <Button fullWidth variant="contained" color="primary" size="large" href='https://constructor.fulogy.com/quiz' target='_blank' onClick={onClick}>Пройти тест</Button>
+        </Grid>
       </Grid>
-    </Grid>
-    </>  
+    </Hidden>
+    <Hidden implementation='css' only={['sm', 'xs']}>
+      <div style={{position: 'relative', paddingTop: 96}}>
+        <Grid container justify="center" alignItems='center'>
+          <Grid item style={{position: 'relative'}}>
+            <Typography variant="h1" component='h2' align='center' gutterBottom style={{
+              position: 'relative',
+              zIndex: 222
+            }}>хотите узнать какая подсветка подойдет<br />вашей кухне</Typography>
+            <Typography variant='h1' component='span' style={{
+              color: '#FDFBFC',
+              fontSize: '9rem',
+              fontWeight: 500,
+              position: 'absolute',
+              top: -65,
+              right: -16
+              }}>%</Typography>
+          </Grid>
+        </Grid>
+      </div>
+    </Hidden>
+  </>  
   )
 }

@@ -11,7 +11,7 @@ import {
   ListItemText
 } from '@material-ui/core';
 
-import {FiberManualRecord} from '@material-ui/icons';
+import FiberManualRecord from '@material-ui/icons/FiberManualRecord';
 
 const useStyle = makeStyles(theme => ({
   nudeBlockStyle: {

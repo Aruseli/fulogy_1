@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@material-ui/core';
 
-import {Close} from '@material-ui/icons';
+import Close from '@material-ui/icons/Close';
 
 
 const useStyle = makeStyles(theme => ({
