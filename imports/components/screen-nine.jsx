@@ -142,21 +142,69 @@ export const ScreenNine = () => {
       </Grid>
     </Hidden>
     <Hidden implementation='css' only={['sm', 'xs']}>
-      <div style={{position: 'relative', paddingTop: 96}}>
-        <Grid container justify="center" alignItems='center'>
-          <Grid item style={{position: 'relative'}}>
-            <Typography variant="h1" component='h2' align='center' gutterBottom style={{
-              position: 'relative',
-              zIndex: 222
-            }}>хотите узнать какая подсветка подойдет<br />вашей кухне</Typography>
-            <Typography variant='h1' component='span' style={{
-              color: '#FDFBFC',
-              fontSize: '9rem',
-              fontWeight: 500,
-              position: 'absolute',
-              top: -65,
-              right: -16
-              }}>%</Typography>
+      <div style={{position: 'relative', overflow: 'hidden'}}>
+        <div style={{position: 'relative', paddingTop: 96}}>
+          <Grid container justify="center" alignItems='center'>
+            <Grid item style={{position: 'relative'}}>
+              <Typography variant="h1" component='h2' align='center' gutterBottom style={{
+                position: 'relative',
+                zIndex: 222
+              }}>хотите узнать какая подсветка подойдет<br />вашей кухне?</Typography>
+              <Typography variant='h1' component='span' style={{
+                color: '#FDFBFC',
+                fontSize: '9rem',
+                fontWeight: 500,
+                position: 'absolute',
+                top: -65,
+                right: -16
+                }}>%</Typography>
+            </Grid>
+          </Grid>
+        </div>
+        <Grid 
+          container
+          justify='center'
+          alignItems='center'
+          style={{position: 'relative'}}
+        >
+          <Grid item style={{paddingTop: 60}}>
+            <Paper style={{
+              padding: '48px 128px',
+              backgroundImage: "url('/icon/dashed.svg')" ,
+              borderRadius: 10 
+            }} square elevation={5}>
+              <Typography variant='body1' component='p' align='center'>Пройдите тест из&ensp;
+                <Typography variant='body2' component='span'>6 вопросов за 2 минуты</Typography>&ensp;
+                и получите<br />
+                <Typography variant='h5' component='span'>скидку 20%</Typography>&ensp;на оригинальный светильник от компании&ensp;
+                <Typography variant='body2' component='span' style={{color: '#252049'}}>Fulogy</Typography>&ensp;
+              </Typography>
+            </Paper>
+          </Grid>
+          <Typography variant='h1' component='span' style={{
+            color: '#FCF0F0',
+            fontSize: '9rem',
+            fontWeight: 500,
+            position: 'absolute',
+            top: -64,
+            left: -58
+            }}>%</Typography>
+          <Typography variant='h1' component='span' style={{
+            color: '#FCF0F0',
+            fontSize: '9rem',
+            fontWeight: 500,
+            position: 'absolute',
+            top: 176,
+            right: -26
+            }}>%</Typography>
+        </Grid>
+        <Grid 
+          container
+          justify='center'
+          alignItems='center'
+        >
+          <Grid item md={2} style={{paddingTop: 60}}>
+            <Button fullWidth variant="contained" color="primary" size="large" href='https://constructor.fulogy.com/quiz' target='_blank' onClick={onClick}>Пройти тест</Button>
           </Grid>
         </Grid>
       </div>
