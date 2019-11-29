@@ -106,7 +106,7 @@ export const AnaliticsProvider = ({
   return (
     <>
       {content}
-      {(Meteor.isClient && !!yandexMetrika && !!pathname) && <YMInitializer
+      {(!!yandexMetrika && !!pathname) && <YMInitializer
         accounts={[yandexMetrika]}
         options={{
           clickmap: true,
@@ -115,7 +115,7 @@ export const AnaliticsProvider = ({
           webvisor: true,
           trackHash: true,
           userParams: {
-            userId: localStorage.getItem('userId'),
+            userId: Meteor.isClient ? localStorage.getItem('userId') : null,
           },
         }}
         version="2"
