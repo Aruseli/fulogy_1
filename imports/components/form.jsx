@@ -26,8 +26,8 @@ const useStyle = makeStyles(theme => ({
   },
   closeButton: {
     position: 'absolute',
-    right: theme.spacing(3),
-    top: theme.spacing(3),
+    right: 0,
+    top: 0,
     color: theme.palette.grey[500],
     [theme.breakpoints.up('md')]: {
       right: theme.spacing(1),
@@ -65,15 +65,15 @@ export const Form = ({}) => {
             aria-label="close"
             className={classes.closeButton}
             onClick={onClick}>
-            <Close style={{height: 60, width: 60}} />
+            <Close style={{height: 24, width: 24}} />
           </IconButton>
           { thanks 
           ? <Thanks />
           : <>
-            <DialogContent style={{padding: '112px 112px 16px 112px', boxSizing: 'border-box'}}>
+            <DialogContent style={{padding: 32, boxSizing: 'border-box'}}>
               {title}
               <Typography variant='body1' component="p" align='center' gutterBottom>Введите свое имя и телефон</Typography>
-              <div style={{paddingTop: 48}}>
+              <div style={{paddingTop: 16}}>
                 <TextField
                   autoFocus
                   id="name"
@@ -87,11 +87,10 @@ export const Form = ({}) => {
                   label="Телефон"
                   type="phone"
                   fullWidth
-                  style={{marginTop: 60}}
                 />
               </div>
             </DialogContent>
-            <DialogActions style={{padding: 112}}>
+            <DialogActions style={{padding: 24}}>
               <Button fullWidth variant="contained" color="primary" size="large" onClick={onThanks}>{bottom}</Button>
             </DialogActions>
           </>}
